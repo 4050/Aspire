@@ -10,9 +10,7 @@ import UIKit
 
 
 struct ButtonPosition {
-    var buttonXPosition: CGFloat?
-    var buttonWidthConstrain: NSLayoutConstraint?
-    //var buttonTrailingConstrain: NSLayoutConstraint?
+    var buttonXPosition: [CGFloat?]?
 }
 
 class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -28,14 +26,12 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var button3Width: NSLayoutConstraint!
     
     
-    @IBOutlet var buttons: [CustomListRestaurantsButton]!
+    private var buttons: [CustomListRestaurantsButton] = []
     
-    private var positionButton1 = ButtonPosition()
-    private var positionButton2 = ButtonPosition()
-    private var positionButton3 = ButtonPosition()
+    private var positionButton = ButtonPosition()
     
     private var checkRatingButton: Bool = false
-
+    
     let restaurantName = ["Restaurant", "Pepe`s", "Max"]
     let restaurantImage = "bartolome.png"
     
@@ -48,12 +44,8 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        positionButton1.buttonWidthConstrain = button1Width
-        positionButton2.buttonWidthConstrain = button2Width
-        positionButton3.buttonWidthConstrain = button3Width
-        positionButton1.buttonXPosition = button1.frame.origin.x
-        positionButton2.buttonXPosition = button2.frame.origin.x
-        positionButton3.buttonXPosition = button3.frame.origin.x
+        buttons = [button1, button2, button3]
+        positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x]
         
     }
     
@@ -88,34 +80,67 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func buttonPosition() {
-        button1.frame.origin.x = positionButton1.buttonXPosition ?? 0
-        button2.frame.origin.x = positionButton2.buttonXPosition ?? 0
-        button3.frame.origin.x = positionButton3.buttonXPosition ?? 0
-    }
-    
-    func buttonActive() {
         for button in buttons {
-            button.isUserInteractionEnabled = true
+            animationDisablePositionButton(button: button, positionButton: CGFloat(positionButton.buttonXPosition!.count))
         }
     }
     
-   @IBAction func buttonClick(_ button: CustomListRestaurantsButton){
-       buttonPosition()
-        switch button.tag {
-          case 1:
-                   button.ButtonEnableAnimation(titleName: "Популярное", firstImage: "fingerLike", secondImage: "like-black")
-                  button2.transform = CGAffineTransform(translationX: button2.transform.tx + 81, y: button2.transform.ty)
-               button3.transform = CGAffineTransform(translationX: button3.transform.tx + 81, y: button3.transform.ty)
-                  break;
-          case 2:
-                   print("Button2: tap")
-                   button.ButtonEnableAnimation(titleName: "Новинки", firstImage: "new-white", secondImage: "new-black")
-                  break;
-          case 3:
-                  break;
-          default: ()
-                  break;
-          }
+    @IBAction func buttonClick(_ selectButton: CustomListRestaurantsButton) {
+        selectButton.isSelected = true
+        buttonPosition()
+        
+        for button in buttons {
+            if button.isSelected && button !== selectButton {
+                print(button.tag)
+                button.isSelected = false
+                switch button.tag {
+                case 1:
+                    button.ButtonDisableAnimation(titleName: "Популярное", firstImage: "fingerLike", secondImage: "like-black")
+                    break;
+                case 2:
+                    button.ButtonDisableAnimation(titleName: "Популярное", firstImage: "new-white", secondImage: "new-black")
+                    break;
+                default: ()
+                break;
+                }
+            }
+        }
+        
+        switch selectButton.tag {
+        case 1:
+            selectButton.ButtonEnableAnimation(titleName: "Популярное", firstImage: "fingerLike", secondImage: "like-black")
+            animationEnablePositionButton(button: button2, x: 81)
+            animationEnablePositionButton(button: button3, x: 81)
+            break;
+        case 2:
+            selectButton.ButtonEnableAnimation(titleName: "Новинки", firstImage: "new-white", secondImage: "new-black")
+            button3.transform = CGAffineTransform(translationX: button3.transform.tx + 81, y: button3.transform.ty)
+            break;
+        case 3:
+            break;
+        default: ()
+        break;
+        }
+    }
+}
+
+extension ListRestaurantsViewController {
+    func animationEnablePositionButton(button: CustomListRestaurantsButton, x: CGFloat) {
+           UIView.animate(withDuration: 0.35,
+                          delay: 0,
+                          options: .curveEaseInOut,
+                          animations: {
+                            button.transform = CGAffineTransform(translationX: button.transform.tx + x, y: button.transform.ty)
+           })
+       }
+    
+    func animationDisablePositionButton(button: CustomListRestaurantsButton, positionButton: CGFloat) {
+        UIView.animate(withDuration: 0.35,
+                       delay: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                         button.transform = CGAffineTransform(translationX: positionButton, y: button.transform.ty)
+        })
     }
 }
 

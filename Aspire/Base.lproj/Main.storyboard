@@ -459,9 +459,6 @@
                         <outlet property="button3Width" destination="1Cc-26-BFu" id="1S6-3S-uXs"/>
                         <outlet property="stackView" destination="IRO-Cu-Dz5" id="160-pZ-njl"/>
                         <outlet property="tableView" destination="sao-PN-Jpp" id="eDm-B3-xNm"/>
-                        <outletCollection property="buttons" destination="hmp-c2-VKv" collectionClass="NSMutableArray" id="ihY-Pw-jdP"/>
-                        <outletCollection property="buttons" destination="hmp-c2-VKv" collectionClass="NSMutableArray" id="zz2-qT-mw7"/>
-                        <outletCollection property="buttons" destination="0zx-6O-F4u" collectionClass="NSMutableArray" id="rKR-69-F8A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64q-k6-YvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
