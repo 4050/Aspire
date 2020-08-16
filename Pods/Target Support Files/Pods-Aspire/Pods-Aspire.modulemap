@@ -1,0 +1,6 @@
+framework module Pods_Aspire {
+  umbrella header "Pods-Aspire-umbrella.h"
+
+  export *
+  module * { export * }
+}
