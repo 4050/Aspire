@@ -21,10 +21,6 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var button3: CustomListRestaurantsButton!
     @IBOutlet weak var stackView: UIStackView!
     
-    @IBOutlet weak var button1Width: NSLayoutConstraint!
-    @IBOutlet weak var button2Width: NSLayoutConstraint!
-    @IBOutlet weak var button3Width: NSLayoutConstraint!
-    
     
     private var buttons: [CustomListRestaurantsButton] = []
     
@@ -34,11 +30,6 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     
     let restaurantName = ["Restaurant", "Pepe`s", "Max"]
     let restaurantImage = "bartolome.png"
-    
-    var button1isActive: Bool = false
-    var button2isActive: Bool = false
-    var button3isActive: Bool = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,13 +76,15 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     
+
     @IBAction func buttonClick(_ selectButton: CustomListRestaurantsButton) {
+        print(selectButton.tag)
         selectButton.isSelected = true
+        print(selectButton.isSelected)
         buttonPosition()
         
         for button in buttons {
             if button.isSelected && button !== selectButton {
-                print(button.tag)
                 button.isSelected = false
                 switch button.tag {
                 case 1:
@@ -99,6 +92,9 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
                     break;
                 case 2:
                     button.ButtonDisableAnimation(titleName: "Популярное", firstImage: "new-white", secondImage: "new-black")
+                    break;
+                case 3:
+                    button.ButtonDisableAnimation(titleName: "Скидки", firstImage: "sale-white", secondImage: "sale-black")
                     break;
                 default: ()
                 break;
@@ -111,12 +107,16 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
             selectButton.ButtonEnableAnimation(titleName: "Популярное", firstImage: "fingerLike", secondImage: "like-black")
             animationEnablePositionButton(button: button2, x: 81)
             animationEnablePositionButton(button: button3, x: 81)
+            print(selectButton.isUserInteractionEnabled)
             break;
         case 2:
             selectButton.ButtonEnableAnimation(titleName: "Новинки", firstImage: "new-white", secondImage: "new-black")
-            button3.transform = CGAffineTransform(translationX: button3.transform.tx + 81, y: button3.transform.ty)
+            animationEnablePositionButton(button: button3, x: 81)
+            print(selectButton.isUserInteractionEnabled)
             break;
         case 3:
+            selectButton.ButtonEnableAnimation(titleName: "Скидки", firstImage: "sale-white", secondImage: "sale-black")
+            print(selectButton.isUserInteractionEnabled)
             break;
         default: ()
         break;
@@ -126,20 +126,20 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
 
 extension ListRestaurantsViewController {
     func animationEnablePositionButton(button: CustomListRestaurantsButton, x: CGFloat) {
-           UIView.animate(withDuration: 0.35,
-                          delay: 0,
-                          options: .curveEaseInOut,
-                          animations: {
-                            button.transform = CGAffineTransform(translationX: button.transform.tx + x, y: button.transform.ty)
-           })
-       }
+        UIView.animate(withDuration: 0.35,
+                       delay: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        button.transform = CGAffineTransform(translationX: button.transform.tx + x, y: button.transform.ty)
+        })
+    }
     
     func animationDisablePositionButton(button: CustomListRestaurantsButton, positionButton: CGFloat) {
         UIView.animate(withDuration: 0.35,
                        delay: 0,
                        options: .curveEaseInOut,
                        animations: {
-                         button.transform = CGAffineTransform(translationX: positionButton, y: button.transform.ty)
+                        button.transform = CGAffineTransform(translationX: positionButton, y: button.transform.ty)
         })
     }
 }

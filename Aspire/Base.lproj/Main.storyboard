@@ -388,8 +388,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRO-Cu-Dz5">
-                                <rect key="frame" x="20" y="249" width="244" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IRO-Cu-Dz5">
+                                <rect key="frame" x="20" y="249" width="310" height="44"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zx-6O-F4u" customClass="CustomListRestaurantsButton" customModule="Aspire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
@@ -407,7 +407,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmp-c2-VKv" customClass="CustomListRestaurantsButton" customModule="Aspire" customModuleProvider="target">
-                                        <rect key="frame" x="87" y="0.0" width="70" height="44"/>
+                                        <rect key="frame" x="80" y="0.0" width="70" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="Sab-Jh-YNm"/>
@@ -418,22 +418,30 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonClick:" destination="lyz-TQ-rMs" eventType="touchUpInside" id="VZ1-we-KWo"/>
+                                            <action selector="buttonClick:" destination="lyz-TQ-rMs" eventType="touchUpInside" id="yvj-2a-ELW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtC-Su-9VA" customClass="CustomListRestaurantsButton" customModule="Aspire" customModuleProvider="target">
-                                        <rect key="frame" x="174" y="0.0" width="70" height="44"/>
+                                    <button opaque="NO" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDj-bu-lhQ" customClass="CustomListRestaurantsButton" customModule="Aspire" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="0.0" width="70" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="1Cc-26-BFu"/>
-                                            <constraint firstAttribute="height" constant="44" id="oXG-Og-yQh"/>
+                                            <constraint firstAttribute="height" constant="44" id="yCJ-Nn-RX4"/>
+                                            <constraint firstAttribute="width" constant="70" id="zV7-dl-bCh"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal">
+                                        <state key="normal" image="sale-black">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonClick:" destination="lyz-TQ-rMs" eventType="touchUpInside" id="b7Y-Fh-SvV"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOF-8d-e90">
+                                        <rect key="frame" x="240" y="0.0" width="70" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -452,11 +460,8 @@
                     <navigationItem key="navigationItem" title="Aspire" id="CVD-Ig-Wif"/>
                     <connections>
                         <outlet property="button1" destination="0zx-6O-F4u" id="QLC-zB-Ogj"/>
-                        <outlet property="button1Width" destination="b5M-eR-z93" id="hlq-kK-fsD"/>
                         <outlet property="button2" destination="hmp-c2-VKv" id="54M-1h-nSy"/>
-                        <outlet property="button2Width" destination="Sab-Jh-YNm" id="tCJ-tf-lQM"/>
-                        <outlet property="button3" destination="RtC-Su-9VA" id="jM8-SD-oTA"/>
-                        <outlet property="button3Width" destination="1Cc-26-BFu" id="1S6-3S-uXs"/>
+                        <outlet property="button3" destination="wDj-bu-lhQ" id="xII-xy-7Vj"/>
                         <outlet property="stackView" destination="IRO-Cu-Dz5" id="160-pZ-njl"/>
                         <outlet property="tableView" destination="sao-PN-Jpp" id="eDm-B3-xNm"/>
                     </connections>
@@ -568,6 +573,7 @@
         <image name="eye 1" width="20" height="20"/>
         <image name="like-black" width="20" height="20"/>
         <image name="new-black" width="27" height="28"/>
+        <image name="sale-black" width="30" height="29"/>
         <image name="search" width="24" height="24"/>
         <image name="stars4" width="19.666666030883789" height="3.3333332538604736"/>
         <image name="Аккаунт" width="22" height="27"/>
