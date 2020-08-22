@@ -13,23 +13,28 @@ struct ButtonPosition {
     var buttonXPosition: [CGFloat?]?
 }
 
-class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button1: CustomListRestaurantsButton!
     @IBOutlet weak var button2: CustomListRestaurantsButton!
     @IBOutlet weak var button3: CustomListRestaurantsButton!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var pageControll: UIPageControl!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
     private var buttons: [CustomListRestaurantsButton] = []
-    
     private var positionButton = ButtonPosition()
-    
     private var checkRatingButton: Bool = false
     
+    public let countCell = 1
+    public let reuseIdentifier = "CollectionViewCell"
+    public var imageArrayAd = ["ad1","ad2"]
+    public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad1")]
+    public var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
     let restaurantName = ["Restaurant", "Pepe`s", "Max"]
-    let restaurantImage = "bartolome.png"
+    let restaurantImage = "rest1.png"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +42,11 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.dataSource = self
         buttons = [button1, button2, button3]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x]
-        
+        collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        pageControll.numberOfPages = imageArray.count
+        pageControll.currentPage = 0
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -70,18 +78,17 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         print("RatingButton: tap")
     }
     
-    func buttonPosition() {
+    
+    func restartButtonPosition() {
         for button in buttons {
             animationDisablePositionButton(button: button, positionButton: CGFloat(positionButton.buttonXPosition!.count))
         }
     }
     
-
+    //MARK: Sort Button
     @IBAction func buttonClick(_ selectButton: CustomListRestaurantsButton) {
-        print(selectButton.tag)
         selectButton.isSelected = true
-        print(selectButton.isSelected)
-        buttonPosition()
+        restartButtonPosition()
         
         for button in buttons {
             if button.isSelected && button !== selectButton {

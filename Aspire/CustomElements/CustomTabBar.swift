@@ -10,8 +10,6 @@ import UIKit
 
 @IBDesignable class CustomTabBar: UITabBar {
     
-    var tabBar = UITabBar()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupTabBar()
@@ -28,7 +26,8 @@ import UIKit
     }
     
     func setupTabBar() {
-        tabBar.layer.borderWidth    = 1
-        tabBar.layer.borderColor    = UIColor.darkGray.cgColor
+        layer.masksToBounds = true
+        layer.cornerRadius = 30
+        layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
 }
