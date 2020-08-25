@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		850FE25524B368F400F4F076 /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FE25424B368F400F4F076 /* CustomUIImageView.swift */; };
-		8510E99924F10509005BC84D /* AdvertisingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510E99824F10509005BC84D /* AdvertisingSlider.swift */; };
 		8510E99C24F11077005BC84D /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510E99A24F11077005BC84D /* CustomCollectionViewCell.swift */; };
 		8510E99D24F11077005BC84D /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8510E99B24F11077005BC84D /* CustomCollectionViewCell.xib */; };
 		8521921524AD0C8A0015F0F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521921424AD0C8A0015F0F1 /* AppDelegate.swift */; };
@@ -20,6 +19,7 @@
 		8528635424F03306005E8DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8528635324F03306005E8DEF /* Main.storyboard */; };
 		853CED4C24DDD72500201A56 /* CustomUIViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CED4B24DDD72500201A56 /* CustomUIViewTextField.swift */; };
 		853F0BE324E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F0BE224E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift */; };
+		855C645624F247CC0062A2B4 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */; };
 		8586028524BD9EAE001A886E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586028424BD9EAE001A886E /* NavigationController.swift */; };
 		858915E924EC206100CED350 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858915E824EC206100CED350 /* CustomPageControl.swift */; };
 		858B6B6724AE2F7C00407B11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B6B6624AE2F7C00407B11 /* LoginViewController.swift */; };
@@ -27,8 +27,12 @@
 		858B9C3E24D9ED8C005C08C4 /* CustomListRestaurantsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B9C3D24D9ED8C005C08C4 /* CustomListRestaurantsButton.swift */; };
 		85A0C14324B9B46A0043E06C /* CustomUIViewCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C14224B9B46A0043E06C /* CustomUIViewCircleButton.swift */; };
 		85AA64B924B2167A003E0B94 /* ListRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA64B824B2167A003E0B94 /* ListRestaurantsViewController.swift */; };
+		85C59B2B24F3BD10005C497F /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C59B2A24F3BD10005C497F /* CustomCollectionView.swift */; };
 		85D8C55124EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8C55024EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift */; };
 		85D9F10A24B0B0B200E26EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D9F10924B0B0B200E26EB0 /* Assets.xcassets */; };
+		85E6631924F57D9F003C23B0 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E6631824F57D9F003C23B0 /* LoginView.storyboard */; };
+		85E6631C24F57DF1003C23B0 /* ListRestaurantsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E6631B24F57DF1003C23B0 /* ListRestaurantsView.storyboard */; };
+		85E6631F24F57E6E003C23B0 /* RestaurantMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E6631E24F57E6E003C23B0 /* RestaurantMenu.storyboard */; };
 		85F8DE2324B1B76300F65E95 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8DE2224B1B76300F65E95 /* RestaurantTableViewCell.swift */; };
 		CDEB041ADD66F9EEA7A065B8 /* Pods_Aspire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F878142AFE0FFA0C78D904E /* Pods_Aspire.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +41,6 @@
 		2391EB3B3E9499E2C8CE77B2 /* Pods-Aspire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspire.release.xcconfig"; path = "Target Support Files/Pods-Aspire/Pods-Aspire.release.xcconfig"; sourceTree = "<group>"; };
 		3F878142AFE0FFA0C78D904E /* Pods_Aspire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aspire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		850FE25424B368F400F4F076 /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
-		8510E99824F10509005BC84D /* AdvertisingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingSlider.swift; sourceTree = "<group>"; };
 		8510E99A24F11077005BC84D /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		8510E99B24F11077005BC84D /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		8521921124AD0C8A0015F0F1 /* Aspire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aspire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +54,7 @@
 		8528635324F03306005E8DEF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		853CED4B24DDD72500201A56 /* CustomUIViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewTextField.swift; sourceTree = "<group>"; };
 		853F0BE224E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSocialNetworkButton.swift; sourceTree = "<group>"; };
+		855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
 		8586028424BD9EAE001A886E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		858915E824EC206100CED350 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		858B6B6624AE2F7C00407B11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -58,8 +62,12 @@
 		858B9C3D24D9ED8C005C08C4 /* CustomListRestaurantsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRestaurantsButton.swift; sourceTree = "<group>"; };
 		85A0C14224B9B46A0043E06C /* CustomUIViewCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewCircleButton.swift; sourceTree = "<group>"; };
 		85AA64B824B2167A003E0B94 /* ListRestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRestaurantsViewController.swift; sourceTree = "<group>"; };
+		85C59B2A24F3BD10005C497F /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		85D8C55024EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListRestaurantsViewController + UICollectionView.swift"; sourceTree = "<group>"; };
 		85D9F10924B0B0B200E26EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85E6631824F57D9F003C23B0 /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
+		85E6631B24F57DF1003C23B0 /* ListRestaurantsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListRestaurantsView.storyboard; sourceTree = "<group>"; };
+		85E6631E24F57E6E003C23B0 /* RestaurantMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaurantMenu.storyboard; sourceTree = "<group>"; };
 		85F8DE2224B1B76300F65E95 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		E326CED624F66CDC46FA9199 /* Pods-Aspire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspire.debug.xcconfig"; path = "Target Support Files/Pods-Aspire/Pods-Aspire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,8 +125,8 @@
 				858B6B6524AE1E6B00407B11 /* CustomElements */,
 				858B6B6224AE1E2C00407B11 /* View */,
 				8521921424AD0C8A0015F0F1 /* AppDelegate.swift */,
-				8521921624AD0C8A0015F0F1 /* SceneDelegate.swift */,
 				8528635324F03306005E8DEF /* Main.storyboard */,
+				8521921624AD0C8A0015F0F1 /* SceneDelegate.swift */,
 				8521921F24AD0C8B0015F0F1 /* LaunchScreen.storyboard */,
 				8521922224AD0C8B0015F0F1 /* Info.plist */,
 				85D9F10924B0B0B200E26EB0 /* Assets.xcassets */,
@@ -129,9 +137,9 @@
 		8556104D24F007B9007A33E1 /* CustomSlider */ = {
 			isa = PBXGroup;
 			children = (
-				8510E99824F10509005BC84D /* AdvertisingSlider.swift */,
 				8510E99A24F11077005BC84D /* CustomCollectionViewCell.swift */,
 				8510E99B24F11077005BC84D /* CustomCollectionViewCell.xib */,
+				85C59B2A24F3BD10005C497F /* CustomCollectionView.swift */,
 			);
 			path = CustomSlider;
 			sourceTree = "<group>";
@@ -147,11 +155,10 @@
 		858B6B6224AE1E2C00407B11 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85AA64B824B2167A003E0B94 /* ListRestaurantsViewController.swift */,
+				85E6631D24F57E24003C23B0 /* RestaurantMenuViewController */,
+				85E6631A24F57DB0003C23B0 /* ListRestaurantsViewController */,
+				85E6631524F57CAF003C23B0 /* LoginViewController */,
 				8521921824AD0C8A0015F0F1 /* ViewController.swift */,
-				858B6B6624AE2F7C00407B11 /* LoginViewController.swift */,
-				8586028424BD9EAE001A886E /* NavigationController.swift */,
-				85D8C55024EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,10 +212,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		85E6631524F57CAF003C23B0 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				85E6631824F57D9F003C23B0 /* LoginView.storyboard */,
+				858B6B6624AE2F7C00407B11 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		85E6631A24F57DB0003C23B0 /* ListRestaurantsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8586028424BD9EAE001A886E /* NavigationController.swift */,
+				85AA64B824B2167A003E0B94 /* ListRestaurantsViewController.swift */,
+				85D8C55024EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift */,
+				85E6631B24F57DF1003C23B0 /* ListRestaurantsView.storyboard */,
+			);
+			path = ListRestaurantsViewController;
+			sourceTree = "<group>";
+		};
+		85E6631D24F57E24003C23B0 /* RestaurantMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				85E6631E24F57E6E003C23B0 /* RestaurantMenu.storyboard */,
+			);
+			path = RestaurantMenuViewController;
+			sourceTree = "<group>";
+		};
 		85F8DE2124B1B72300F65E95 /* CustomViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				85F8DE2224B1B76300F65E95 /* RestaurantTableViewCell.swift */,
+				855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */,
 			);
 			path = CustomViewCell;
 			sourceTree = "<group>";
@@ -283,8 +319,12 @@
 			files = (
 				8521922124AD0C8B0015F0F1 /* LaunchScreen.storyboard in Resources */,
 				85D9F10A24B0B0B200E26EB0 /* Assets.xcassets in Resources */,
+				855C645624F247CC0062A2B4 /* RestaurantTableViewCell.xib in Resources */,
+				85E6631F24F57E6E003C23B0 /* RestaurantMenu.storyboard in Resources */,
 				8528635424F03306005E8DEF /* Main.storyboard in Resources */,
+				85E6631C24F57DF1003C23B0 /* ListRestaurantsView.storyboard in Resources */,
 				8510E99D24F11077005BC84D /* CustomCollectionViewCell.xib in Resources */,
+				85E6631924F57D9F003C23B0 /* LoginView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8586028524BD9EAE001A886E /* NavigationController.swift in Sources */,
-				8510E99924F10509005BC84D /* AdvertisingSlider.swift in Sources */,
 				85A0C14324B9B46A0043E06C /* CustomUIViewCircleButton.swift in Sources */,
 				858B9C3E24D9ED8C005C08C4 /* CustomListRestaurantsButton.swift in Sources */,
 				858B9C3B24D9AD1F005C08C4 /* CustomTabBar.swift in Sources */,
@@ -335,6 +374,7 @@
 				8521921724AD0C8A0015F0F1 /* SceneDelegate.swift in Sources */,
 				85AA64B924B2167A003E0B94 /* ListRestaurantsViewController.swift in Sources */,
 				85F8DE2324B1B76300F65E95 /* RestaurantTableViewCell.swift in Sources */,
+				85C59B2B24F3BD10005C497F /* CustomCollectionView.swift in Sources */,
 				853CED4C24DDD72500201A56 /* CustomUIViewTextField.swift in Sources */,
 				85D8C55124EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift in Sources */,
 				8521922C24AD29E00015F0F1 /* CustomTextField.swift in Sources */,
@@ -476,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3939MPD4F;
 				INFOPLIST_FILE = Aspire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,7 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = stanisalv.Aspire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -494,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3939MPD4F;
 				INFOPLIST_FILE = Aspire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,7 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = stanisalv.Aspire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

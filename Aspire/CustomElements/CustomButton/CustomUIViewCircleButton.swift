@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomUIViewCircleButton: UIView {
+class CustomUIViewCircleButton: UIView {
 
       override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,9 +21,9 @@ import UIKit
         setupUIView()
     }
     
-    override func prepareForInterfaceBuilder() {
-         setupUIView()
-     }
+   // override func prepareForInterfaceBuilder() {
+   //      setupUIView()
+   //  }
     
     func setupUIView() {
         setShadow()
@@ -35,9 +35,9 @@ import UIKit
     
     private func setShadow() {
         layer.shadowColor   = UIColor.black.cgColor
-        layer.shadowOffset  = CGSize(width: 0.0, height: 2.0)
-        layer.shadowRadius  = 2
-        layer.shadowOpacity = 0.2
+        layer.shadowOffset  = CGSize(width: 1, height: 1)
+        layer.shadowRadius  = 5
+        layer.shadowOpacity = 0.3
         clipsToBounds       = true
         layer.masksToBounds = false
     }

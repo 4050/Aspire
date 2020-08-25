@@ -13,7 +13,7 @@ struct ButtonPosition {
     var buttonXPosition: [CGFloat?]?
 }
 
-class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
+class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button1: CustomListRestaurantsButton!
@@ -22,6 +22,7 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
     
     private var buttons: [CustomListRestaurantsButton] = []
@@ -62,6 +63,10 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantName.count // your number of cells here
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        NSLog("Table view scroll detected at offset: %f", scrollView.contentOffset.y)
     }
     
     //MARK: Rating Button

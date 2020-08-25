@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomSocialNetworkButton: UIButton {
+class CustomSocialNetworkButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,9 +21,9 @@ import UIKit
         setupButton()
     }
     
-    override func prepareForInterfaceBuilder() {
-        setupButton()
-    }
+  //  override func prepareForInterfaceBuilder() {
+  //      setupButton()
+  //  }
     
     func setupButton() {
         setShadow()
@@ -34,7 +34,7 @@ import UIKit
     
     private func setShadow() {
         layer.shadowColor   = UIColor.black.cgColor
-        layer.shadowOffset  = CGSize(width: 3.0, height: 4)
+        layer.shadowOffset  = CGSize(width: 1, height: 1)
         layer.shadowRadius  = 5
         layer.shadowOpacity = 0.05
         clipsToBounds       = true

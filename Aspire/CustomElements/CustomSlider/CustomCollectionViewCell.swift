@@ -19,15 +19,16 @@ class CustomCollectionViewCell: UICollectionViewCell {
       }
       
       func setupCustomViewCell() {
-          layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+          //layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
           layer.cornerRadius = 12
           layer.masksToBounds = false
           layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-          layer.shadowOpacity = 0.5
-          layer.shadowOffset = CGSize(width: 0, height: 2)
-          layer.shadowRadius = 2
+          layer.shadowOpacity = 0.3
+          layer.shadowOffset = CGSize(width: 1, height: 1)
+          layer.shadowRadius = 5
           layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
           layer.borderWidth = 0
+          clipsToBounds = true
       }
       
       func setupCell() {

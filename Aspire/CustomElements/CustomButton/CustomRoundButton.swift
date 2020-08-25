@@ -9,7 +9,7 @@
 import UIKit
 
 
-@IBDesignable class CustomRoundButton: UIButton {
+class CustomRoundButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,10 +22,14 @@ import UIKit
         setupButton()
     }
     
-    override func prepareForInterfaceBuilder() {
-         setupButton()
-     }
+    override func awakeFromNib() {
+        setupButton()
+    }
     
+//    override func prepareForInterfaceBuilder() {
+//         setupButton()
+//     }
+//
     func setupButton() {
         setShadow()
         layer.cornerRadius   = 30
@@ -35,9 +39,9 @@ import UIKit
     
     private func setShadow() {
         layer.shadowColor   = UIColor.black.cgColor
-        layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
+        layer.shadowOffset  = CGSize(width: 1, height: 1)
         layer.shadowRadius  = 8
-        layer.shadowOpacity = 0.2
+        layer.shadowOpacity = 0.3
         clipsToBounds       = true
         layer.masksToBounds = false
     }

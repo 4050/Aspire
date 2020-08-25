@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomTextField: UITextField {
+class CustomTextField: UITextField {
 
     var floatingLabel: UILabel = UILabel(frame: CGRect.zero) // Label
     var floatingLabelHeight: CGFloat = 20 // Default height
@@ -60,9 +60,9 @@ import UIKit
         }
     }
     
-    override func prepareForInterfaceBuilder() {
-        setupTextField()
-    }
+   // override func prepareForInterfaceBuilder() {
+   //     setupTextField()
+   // }
     
     func setupTextField() {
         layer.cornerRadius = 25

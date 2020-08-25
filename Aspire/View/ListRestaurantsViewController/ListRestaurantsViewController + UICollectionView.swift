@@ -25,7 +25,7 @@ extension ListRestaurantsViewController {
     }
     
    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        pageControll.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        pageControll.currentPage = Int(scrollView.contentOffset.x + 6) / Int(scrollView.frame.width)
     }
 
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomPageControl: UIPageControl {
+class CustomPageControl: UIPageControl {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,9 +21,9 @@ import UIKit
         setupPageControl()
     }
     
-    override func prepareForInterfaceBuilder() {
-         setupPageControl()
-     }
+//    override func prepareForInterfaceBuilder() {
+//         setupPageControl()
+//     }
     
     override func layoutSubviews() {
            super.layoutSubviews()

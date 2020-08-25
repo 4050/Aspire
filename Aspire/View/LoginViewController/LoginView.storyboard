@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="8hP-Z0-gC3">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="IPP-uY-aLy" customClass="LoginViewController" customModule="Aspire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSX-3G-I0u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWU-oo-bMB" customClass="CustomRoundButton" customModule="Aspire" customModuleProvider="target">
+                                <rect key="frame" x="37" y="461" width="340" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90525734420000004" green="0.29626449939999999" blue="0.29249551889999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Войти в свой аккаунт">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7mr-l9-QLe" kind="presentation" modalPresentationStyle="fullScreen" id="Xuj-db-WDk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtg-Kc-Ft6">
+                                <rect key="frame" x="261" y="390" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-yr-Elw" customClass="CustomTextField" customModule="Aspire" customModuleProvider="target">
+                                <rect key="frame" x="37" y="250" width="340" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTextFieldChangeBegin:" destination="IPP-uY-aLy" eventType="editingDidBegin" id="czC-dw-AQ8"/>
+                                    <action selector="loginTextFieldChangeEnd:" destination="IPP-uY-aLy" eventType="editingDidEnd" id="Dk1-63-tKx"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Логин" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjc-6w-sAc">
+                                <rect key="frame" x="67" y="240" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yi5-6u-eXV" customClass="CustomTextField" customModule="Aspire" customModuleProvider="target">
+                                <rect key="frame" x="37" y="327" width="340" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="passwordTextFieldChangeBegin:" destination="IPP-uY-aLy" eventType="editingDidBegin" id="dyU-XE-VNz"/>
+                                    <action selector="passwordTextFieldChangeEnd:" destination="IPP-uY-aLy" eventType="editingDidEnd" id="ld0-bG-ouv"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsH-k3-YTB">
+                                <rect key="frame" x="335" y="343" width="30" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="eye 1"/>
+                                <connections>
+                                    <action selector="passwordShow:" destination="IPP-uY-aLy" eventType="touchUpInside" id="ibL-zn-XIU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вход через соц сети" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNY-NF-wvg">
+                                <rect key="frame" x="37" y="550" width="130.5" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-aspire" translatesAutoresizingMaskIntoConstraints="NO" id="w4N-u5-hxG">
+                                <rect key="frame" x="151" y="131" width="112" height="49"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-ti-wTc">
+                                <rect key="frame" x="67" y="315" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-cr-gJy">
+                                <rect key="frame" x="37" y="583" width="334" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQY-d0-Sb7" customClass="CustomSocialNetworkButton" customModule="Aspire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="CNn-hN-zce"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mMw-DR-Fwy"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="Telegram">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDP-9D-2Tp" customClass="CustomSocialNetworkButton" customModule="Aspire" customModuleProvider="target">
+                                        <rect key="frame" x="118" y="0.0" width="98" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="Viber">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-Ct-6nd" customClass="CustomSocialNetworkButton" customModule="Aspire" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="0.0" width="98" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="Google">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="w4N-u5-hxG" firstAttribute="leading" relation="lessThanOrEqual" secondItem="CKt-YX-959" secondAttribute="leading" constant="151" id="0P5-bB-YQj"/>
+                            <constraint firstItem="CKt-YX-959" firstAttribute="bottom" secondItem="qfh-cr-gJy" secondAttribute="bottom" constant="219" id="6tL-ux-vF9"/>
+                            <constraint firstItem="w4N-u5-hxG" firstAttribute="top" secondItem="CKt-YX-959" secondAttribute="top" constant="87" id="9Bv-TL-I1V"/>
+                            <constraint firstItem="CKt-YX-959" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="w4N-u5-hxG" secondAttribute="trailing" constant="151" id="Puv-0q-ZRL"/>
+                            <constraint firstItem="qfh-cr-gJy" firstAttribute="leading" secondItem="CKt-YX-959" secondAttribute="leading" constant="37" id="lfK-Pl-MiS"/>
+                            <constraint firstItem="w4N-u5-hxG" firstAttribute="centerX" secondItem="CKt-YX-959" secondAttribute="centerX" id="oQS-NV-k6b"/>
+                            <constraint firstItem="CKt-YX-959" firstAttribute="trailing" secondItem="qfh-cr-gJy" secondAttribute="trailing" constant="43" id="onZ-8D-YlY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CKt-YX-959"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1LL-Su-uNI"/>
+                    <connections>
+                        <outlet property="loginLabel" destination="tjc-6w-sAc" id="Xap-eM-6Ng"/>
+                        <outlet property="passwordLabel" destination="HLS-ti-wTc" id="ISd-V0-bhe"/>
+                        <outlet property="passwordTextField" destination="yi5-6u-eXV" id="UDH-7K-uK2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNQ-g7-PUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="138.61607142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TKi-db-hKc">
+            <objects>
+                <tabBarController id="7mr-l9-QLe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sqJ-bq-m1R"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dUZ-v3-P8W" customClass="CustomTabBar" customModule="Aspire" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.98747700449999998" green="0.26564088460000002" blue="0.2610104084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="isH-JT-ctW" kind="relationship" relationship="viewControllers" id="Crd-8w-P9X"/>
+                        <segue destination="en8-ZW-lkN" kind="relationship" relationship="viewControllers" id="ZBR-9Z-ajp"/>
+                        <segue destination="NHU-5d-Po3" kind="relationship" relationship="viewControllers" id="z4t-8Z-Zcy"/>
+                        <segue destination="zvO-79-LhM" kind="relationship" relationship="viewControllers" id="hKb-tn-oK0"/>
+                        <segue destination="VSR-Mz-Q1f" kind="relationship" relationship="viewControllers" id="WcD-f3-Ph7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PL6-0E-PXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="138"/>
+        </scene>
+        <!--UINavigationListRestaurantsController-->
+        <scene sceneID="ZDd-Yv-gOI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListRestaurantsView" referencedIdentifier="UINavigationListRestaurantsController" id="isH-JT-ctW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h19-Fr-NwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="1097"/>
+        </scene>
+        <!--UIViewController-apj-4U-rGW-->
+        <scene sceneID="GkY-Uz-6fG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-apj-4U-rGW" id="en8-ZW-lkN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UX-zu-CNo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="1097"/>
+        </scene>
+        <!--UIViewController-VBL-gK-jAR-->
+        <scene sceneID="Nne-wH-rXS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-VBL-gK-jAR" id="NHU-5d-Po3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVq-Hr-1ya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="1097"/>
+        </scene>
+        <!--UIViewController-4jd-aq-Txe-->
+        <scene sceneID="vab-xL-sMk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-4jd-aq-Txe" id="zvO-79-LhM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1P3-e2-N2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2425" y="1097"/>
+        </scene>
+        <!--UIViewController-Nqz-jF-fyn-->
+        <scene sceneID="acP-DY-uUL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-Nqz-jF-fyn" id="VSR-Mz-Q1f" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kue-ep-u24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3130" y="1097"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Google" width="23" height="23"/>
+        <image name="Logo-aspire" width="112" height="49"/>
+        <image name="Telegram" width="27" height="23"/>
+        <image name="Viber" width="25" height="28"/>
+        <image name="eye 1" width="20" height="20"/>
+    </resources>
+</document>

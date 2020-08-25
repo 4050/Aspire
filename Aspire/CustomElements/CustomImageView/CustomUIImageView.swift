@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomUIImageView: UIImageView {
+class CustomUIImageView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupImageView()
@@ -20,9 +20,13 @@ import UIKit
         setupImageView()
     }
     
-    override func prepareForInterfaceBuilder() {
+    override func awakeFromNib() {
         setupImageView()
     }
+    
+  //  override func prepareForInterfaceBuilder() {
+  //      setupImageView()
+  //  }
     
     func setupImageView() {
         setShadow()
@@ -34,9 +38,9 @@ import UIKit
     
     private func setShadow() {
         layer.shadowColor   = UIColor.black.cgColor
-        layer.shadowOffset  = CGSize(width: 0, height: 0)
+        layer.shadowOffset  = CGSize(width: 1, height: 1)
         layer.shadowRadius  = 10
-        layer.shadowOpacity = 0.2
+        layer.shadowOpacity = 0.3
         clipsToBounds = false
         layer.masksToBounds = false
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomTabBar: UITabBar {
+class CustomTabBar: UITabBar {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,13 +21,17 @@ import UIKit
         setupTabBar()
     }
     
-    override func prepareForInterfaceBuilder() {
-        setupTabBar()
-    }
+  // override func prepareForInterfaceBuilder() {
+  //     setupTabBar()
+  // }
     
     func setupTabBar() {
-        layer.masksToBounds = true
+        shadowLayer()
         layer.cornerRadius = 30
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        layer.masksToBounds = true
+    }
+    
+    func shadowLayer() {
     }
 }

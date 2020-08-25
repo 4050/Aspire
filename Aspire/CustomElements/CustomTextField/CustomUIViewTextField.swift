@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomUIViewTextField: UITextField {
+class CustomUIViewTextField: UITextField {
     
     
     override init(frame: CGRect) {
@@ -22,9 +22,9 @@ import UIKit
         setupTextField()
     }
     
-    override func prepareForInterfaceBuilder() {
-        setupTextField()
-    }
+  //  override func prepareForInterfaceBuilder() {
+  //      setupTextField()
+  //  }
     
     
     func setupTextField() {
