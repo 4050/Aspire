@@ -17,6 +17,8 @@
 		8521922A24AD111F0015F0F1 /* CustomRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521922924AD111F0015F0F1 /* CustomRoundButton.swift */; };
 		8521922C24AD29E00015F0F1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521922B24AD29E00015F0F1 /* CustomTextField.swift */; };
 		8528635424F03306005E8DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8528635324F03306005E8DEF /* Main.storyboard */; };
+		8535D1DE24F6DF3900E70B4B /* RestaurantMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535D1DC24F6DF3900E70B4B /* RestaurantMenuTableViewCell.swift */; };
+		8535D1DF24F6DF3900E70B4B /* RestaurantMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8535D1DD24F6DF3900E70B4B /* RestaurantMenuTableViewCell.xib */; };
 		853CED4C24DDD72500201A56 /* CustomUIViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CED4B24DDD72500201A56 /* CustomUIViewTextField.swift */; };
 		853F0BE324E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F0BE224E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift */; };
 		855C645624F247CC0062A2B4 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */; };
@@ -52,6 +54,8 @@
 		8521922924AD111F0015F0F1 /* CustomRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundButton.swift; sourceTree = "<group>"; };
 		8521922B24AD29E00015F0F1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8528635324F03306005E8DEF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8535D1DC24F6DF3900E70B4B /* RestaurantMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuTableViewCell.swift; sourceTree = "<group>"; };
+		8535D1DD24F6DF3900E70B4B /* RestaurantMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantMenuTableViewCell.xib; sourceTree = "<group>"; };
 		853CED4B24DDD72500201A56 /* CustomUIViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewTextField.swift; sourceTree = "<group>"; };
 		853F0BE224E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSocialNetworkButton.swift; sourceTree = "<group>"; };
 		855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 				85D9F10924B0B0B200E26EB0 /* Assets.xcassets */,
 			);
 			path = Aspire;
+			sourceTree = "<group>";
+		};
+		8535D1E024F6DF3D00E70B4B /* RestaurantMenuTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8535D1DC24F6DF3900E70B4B /* RestaurantMenuTableViewCell.swift */,
+				8535D1DD24F6DF3900E70B4B /* RestaurantMenuTableViewCell.xib */,
+			);
+			path = RestaurantMenuTableViewCell;
 			sourceTree = "<group>";
 		};
 		8556104D24F007B9007A33E1 /* CustomSlider */ = {
@@ -245,6 +258,7 @@
 			children = (
 				85F8DE2224B1B76300F65E95 /* RestaurantTableViewCell.swift */,
 				855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */,
+				8535D1E024F6DF3D00E70B4B /* RestaurantMenuTableViewCell */,
 			);
 			path = CustomViewCell;
 			sourceTree = "<group>";
@@ -319,6 +333,7 @@
 			files = (
 				8521922124AD0C8B0015F0F1 /* LaunchScreen.storyboard in Resources */,
 				85D9F10A24B0B0B200E26EB0 /* Assets.xcassets in Resources */,
+				8535D1DF24F6DF3900E70B4B /* RestaurantMenuTableViewCell.xib in Resources */,
 				855C645624F247CC0062A2B4 /* RestaurantTableViewCell.xib in Resources */,
 				85E6631F24F57E6E003C23B0 /* RestaurantMenu.storyboard in Resources */,
 				8528635424F03306005E8DEF /* Main.storyboard in Resources */,
@@ -367,6 +382,7 @@
 				858B6B6724AE2F7C00407B11 /* LoginViewController.swift in Sources */,
 				8510E99C24F11077005BC84D /* CustomCollectionViewCell.swift in Sources */,
 				853F0BE324E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift in Sources */,
+				8535D1DE24F6DF3900E70B4B /* RestaurantMenuTableViewCell.swift in Sources */,
 				850FE25524B368F400F4F076 /* CustomUIImageView.swift in Sources */,
 				8521922A24AD111F0015F0F1 /* CustomRoundButton.swift in Sources */,
 				8521921924AD0C8A0015F0F1 /* ViewController.swift in Sources */,

@@ -23,11 +23,12 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     private var buttons: [CustomListRestaurantsButton] = []
     private var positionButton = ButtonPosition()
     private var checkRatingButton: Bool = false
+    private let screenHeight = UIScreen.main.bounds.height
     
     public let countCell = 1
     public let reuseIdentifier = "CollectionViewCell"
@@ -48,6 +49,9 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         pageControll.currentPage = 0
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -67,6 +71,7 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         NSLog("Table view scroll detected at offset: %f", scrollView.contentOffset.y)
+
     }
     
     //MARK: Rating Button
@@ -119,16 +124,13 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
             selectButton.ButtonEnableAnimation(titleName: "Популярное", firstImage: "fingerLike", secondImage: "like-black")
             animationEnablePositionButton(button: button2, x: 81)
             animationEnablePositionButton(button: button3, x: 81)
-            print(selectButton.isUserInteractionEnabled)
             break;
         case 2:
             selectButton.ButtonEnableAnimation(titleName: "Новинки", firstImage: "new-white", secondImage: "new-black")
             animationEnablePositionButton(button: button3, x: 81)
-            print(selectButton.isUserInteractionEnabled)
             break;
         case 3:
             selectButton.ButtonEnableAnimation(titleName: "Скидки", firstImage: "sale-white", secondImage: "sale-black")
-            print(selectButton.isUserInteractionEnabled)
             break;
         default: ()
         break;
@@ -155,5 +157,6 @@ extension ListRestaurantsViewController {
         })
     }
 }
+
 
 

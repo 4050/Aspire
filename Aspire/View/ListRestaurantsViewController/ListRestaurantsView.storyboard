@@ -38,26 +38,27 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BVY-TE-zUk" customClass="CustomCollectionView" customModule="Aspire" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="165"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="172"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="165" id="7uw-0G-1Uh"/>
+                                            <constraint firstAttribute="height" constant="172" id="7uw-0G-1Uh"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZS2-bX-8ws">
-                                            <size key="itemSize" width="374" height="165"/>
+                                            <size key="itemSize" width="374" height="168"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CollectionViewCell" id="ASG-zD-iwO">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="165"/>
+                                                <rect key="frame" x="0.0" y="2" width="374" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xDB-jX-SSm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="165"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="168"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="customSize" width="374" height="168"/>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
@@ -66,7 +67,7 @@
                                         </connections>
                                     </collectionView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="10" sectionFooterHeight="28" estimatedSectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="sao-PN-Jpp">
-                                        <rect key="frame" x="0.0" y="225" width="414" height="583"/>
+                                        <rect key="frame" x="0.0" y="232" width="414" height="586"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="210" id="8ll-PF-oot" customClass="RestaurantTableViewCell" customModule="Aspire" customModuleProvider="target">
@@ -143,14 +144,17 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-vk-ibA" customClass="CustomPageControl" customModule="Aspire" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="128" width="39" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="IRO-Cu-Dz5">
-                                        <rect key="frame" x="20" y="173" width="313" height="44"/>
+                                        <rect key="frame" x="20" y="180" width="313" height="44"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zx-6O-F4u" customClass="CustomListRestaurantsButton" customModule="Aspire" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="70" id="aZb-kG-1pW"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="woY-AU-b82"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -202,13 +206,9 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-vk-ibA" customClass="CustomPageControl" customModule="Aspire" customModuleProvider="target">
-                                        <rect key="frame" x="188" y="128" width="39" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qb9-NQ-Mxu" firstAttribute="bottom" secondItem="sao-PN-Jpp" secondAttribute="bottom" constant="-16" id="7Kg-et-ybA"/>
+                                    <constraint firstItem="qb9-NQ-Mxu" firstAttribute="bottom" secondItem="sao-PN-Jpp" secondAttribute="bottom" constant="-10" id="7Kg-et-ybA"/>
                                     <constraint firstAttribute="trailing" secondItem="BVY-TE-zUk" secondAttribute="trailing" constant="20" id="8lk-Zc-THO"/>
                                     <constraint firstItem="sao-PN-Jpp" firstAttribute="top" secondItem="IRO-Cu-Dz5" secondAttribute="bottom" constant="8" id="BbL-1l-Hv6"/>
                                     <constraint firstItem="BVY-TE-zUk" firstAttribute="centerX" secondItem="0N5-uZ-r3E" secondAttribute="centerX" id="Hf0-pe-VPL"/>
@@ -216,7 +216,7 @@
                                     <constraint firstItem="BVY-TE-zUk" firstAttribute="leading" secondItem="H6x-oi-Veo" secondAttribute="leading" constant="20" id="UQH-9F-Zek"/>
                                     <constraint firstItem="BVY-TE-zUk" firstAttribute="top" secondItem="qb9-NQ-Mxu" secondAttribute="top" id="bgp-3f-77a"/>
                                     <constraint firstItem="BVY-TE-zUk" firstAttribute="centerX" secondItem="sao-PN-Jpp" secondAttribute="centerX" id="fjX-l9-Dl9"/>
-                                    <constraint firstAttribute="bottom" secondItem="BVY-TE-zUk" secondAttribute="bottom" constant="627" id="i5j-uA-Ptg"/>
+                                    <constraint firstAttribute="bottom" secondItem="BVY-TE-zUk" secondAttribute="bottom" constant="636" id="i5j-uA-Ptg"/>
                                     <constraint firstItem="sao-PN-Jpp" firstAttribute="trailing" secondItem="qb9-NQ-Mxu" secondAttribute="trailing" id="n5f-i5-8sz"/>
                                     <constraint firstItem="BVY-TE-zUk" firstAttribute="leading" secondItem="IRO-Cu-Dz5" secondAttribute="leading" id="tr5-jN-HbA"/>
                                     <constraint firstItem="IRO-Cu-Dz5" firstAttribute="top" secondItem="BVY-TE-zUk" secondAttribute="bottom" constant="8" id="xjv-zh-jwL"/>
@@ -242,6 +242,7 @@
                         <outlet property="collectionView" destination="BVY-TE-zUk" id="G1A-PX-8KP"/>
                         <outlet property="collectionViewHeightConstraint" destination="7uw-0G-1Uh" id="ftg-oz-iYv"/>
                         <outlet property="pageControll" destination="1k5-vk-ibA" id="KQz-Rd-ICX"/>
+                        <outlet property="scrollView" destination="0N5-uZ-r3E" id="Uko-dw-pCm"/>
                         <outlet property="stackView" destination="IRO-Cu-Dz5" id="160-pZ-njl"/>
                         <outlet property="tableView" destination="sao-PN-Jpp" id="eDm-B3-xNm"/>
                     </connections>
