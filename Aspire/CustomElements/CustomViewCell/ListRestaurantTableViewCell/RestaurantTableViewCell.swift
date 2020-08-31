@@ -29,15 +29,15 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     func setupCustomViewCell() {
-        backgroundViewCell.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        backgroundViewCell.layer.cornerRadius = 12
-        backgroundViewCell.layer.masksToBounds = false
-        backgroundViewCell.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        backgroundViewCell.layer.shadowOpacity = 1
-        backgroundViewCell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        backgroundViewCell.layer.shadowRadius = 5
-        backgroundViewCell.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        backgroundViewCell.layer.borderWidth = 0.1
+       backgroundViewCell.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+       backgroundViewCell.layer.cornerRadius = 12
+       backgroundViewCell.layer.masksToBounds = false
+       backgroundViewCell.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+       backgroundViewCell.layer.shadowOpacity = 1
+       backgroundViewCell.layer.shadowOffset = CGSize(width: 0, height: 0)
+       backgroundViewCell.layer.shadowRadius = 5
+       backgroundViewCell.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+       backgroundViewCell.layer.borderWidth = 0.1
     }
     
     func setupImageViewCell() {
