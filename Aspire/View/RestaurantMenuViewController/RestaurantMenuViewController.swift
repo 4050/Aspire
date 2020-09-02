@@ -9,19 +9,25 @@
 import UIKit
 
 
-class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button1: CustomRestaurantMenuButton!
     @IBOutlet weak var button2: CustomRestaurantMenuButton!
     @IBOutlet weak var button3: CustomRestaurantMenuButton!
     @IBOutlet weak var button4: CustomRestaurantMenuButton!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControll: UIPageControl!
     
     
     private var product = ["Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1"]
     private var image = ["food2.png", "food3.png", "food2.png", "food3.png", "food2.png"]
     private var buttons: [CustomRestaurantMenuButton] = []
     private var productCellId = "RestaurantMenuTableViewCell"
+    
+    public var reuseIdentifier = "CollectionViewCell"
+    public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad1")]
+    
     private var positionButton = ButtonPosition()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +35,9 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
         tableView.separatorColor = UIColor.clear
         buttons = [button1, button2, button3, button4]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x, button4.frame.origin.x]
+         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        pageControll.numberOfPages = imageArray.count
+               pageControll.currentPage = 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -62,16 +71,16 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
                 button.isSelected = false
                 switch button.tag {
                 case 1:
-                    button.ButtonDisableAnimation(titleName: "Популярное", firstImage: "fingerLike", secondImage: "like-black")
+                    button.ButtonDisableAnimation(titleName: "Все меню", firstImage: "allMenu-white", secondImage: "allMenu-black")
                     break;
                 case 2:
-                    button.ButtonDisableAnimation(titleName: "Популярное", firstImage: "new-white", secondImage: "new-black")
+                    button.ButtonDisableAnimation(titleName: "Закуски", firstImage: "coldFood-white", secondImage: "coldFood-black")
                     break;
                 case 3:
-                    button.ButtonDisableAnimation(titleName: "Скидки", firstImage: "sale-white", secondImage: "sale-black")
+                    button.ButtonDisableAnimation(titleName: "Горячее", firstImage: "hotFood-white", secondImage: "hotFood-black")
                     break;
                 case 4:
-                    button.ButtonDisableAnimation(titleName: "Скидки", firstImage: "sale-white", secondImage: "sale-black")
+                    button.ButtonDisableAnimation(titleName: "Напитки", firstImage: "drinks-white", secondImage: "drinks-black")
                     break;
                 default: ()
                 break;
@@ -81,22 +90,22 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
         
         switch selectButton.tag {
         case 1:
-            selectButton.ButtonEnableAnimation(titleName: "Все меню", firstImage: "allMenu-white", secondImage: "like-black")
+            selectButton.ButtonEnableAnimation(titleName: "Все меню", firstImage: "allMenu-white", secondImage: "allMenu-black")
             animationEnablePositionButton(button: button2, x: 65)
             animationEnablePositionButton(button: button3, x: 65)
             animationEnablePositionButton(button: button4, x: 65)
             break;
         case 2:
-            selectButton.ButtonEnableAnimation(titleName: "Закуски", firstImage: "new-white", secondImage: "new-black")
+            selectButton.ButtonEnableAnimation(titleName: "Закуски", firstImage: "coldFood-white", secondImage: "coldFood-black")
             animationEnablePositionButton(button: button3, x: 65)
             animationEnablePositionButton(button: button4, x: 65)
             break;
         case 3:
-            selectButton.ButtonEnableAnimation(titleName: "Горячее", firstImage: "sale-white", secondImage: "sale-black")
+            selectButton.ButtonEnableAnimation(titleName: "Горячее", firstImage: "hotFood-white", secondImage: "hotFood-black")
             animationEnablePositionButton(button: button4, x: 65)
             break;
         case 4:
-            selectButton.ButtonEnableAnimation(titleName: "Напитки", firstImage: "sale-white", secondImage: "sale-black")
+            selectButton.ButtonEnableAnimation(titleName: "Напитки", firstImage: "drinks-white", secondImage: "drinks-black")
             break;
         default: ()
         break;

@@ -5,7 +5,6 @@
 //  Created by Stanislav on 18.08.2020.
 //  Copyright © 2020 Stanislav. All rights reserved.
 //
-
 import UIKit
 
 extension ListRestaurantsViewController {
@@ -26,9 +25,6 @@ extension ListRestaurantsViewController {
     
    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControll.currentPage = Int(scrollView.contentOffset.x + 6) / Int(scrollView.frame.width)
-    }
-
-    
-    
+    }  
 }
 

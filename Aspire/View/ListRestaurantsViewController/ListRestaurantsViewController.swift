@@ -24,6 +24,7 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerConstraint: NSLayoutConstraint!
     
     private let restaurantName = ["Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max"]
     private let restaurantImage = "rest1.png"
@@ -55,7 +56,7 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        buttonClick(button1)
+        //buttonClick(button1)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
