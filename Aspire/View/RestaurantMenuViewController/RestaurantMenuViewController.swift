@@ -11,6 +11,8 @@ import UIKit
 
 class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button1: CustomRestaurantMenuButton!
     @IBOutlet weak var button2: CustomRestaurantMenuButton!
@@ -20,11 +22,13 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var pageControll: UIPageControl!
     
     
+    
     private var product = ["Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1"]
     private var image = ["food2.png", "food3.png", "food2.png", "food3.png", "food2.png"]
     private var buttons: [CustomRestaurantMenuButton] = []
     private var productCellId = "RestaurantMenuTableViewCell"
     
+    public var rest = RestaurantMenuTableViewCell()
     public var reuseIdentifier = "CollectionViewCell"
     public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad1")]
     
@@ -35,11 +39,16 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
         tableView.separatorColor = UIColor.clear
         buttons = [button1, button2, button3, button4]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x, button4.frame.origin.x]
-         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         pageControll.numberOfPages = imageArray.count
-               pageControll.currentPage = 0
+        pageControll.currentPage = 0
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+           super.viewDidAppear(true)
+           setFirstButton()
+       }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -52,8 +61,13 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: productCellId, for: indexPath) as! RestaurantMenuTableViewCell
         cell.foodNameLabel.text = product[indexPath.row]
         cell.imageViewCell?.image = UIImage(named: image[indexPath.row])
+        cell.delegate = self
+        cell.minusButton.tag = indexPath.row
+        cell.plusButton.tag = indexPath.row
+        cell.firstButtonDisable()
         return cell
     }
+    
     
     func restartButtonPosition() {
         for button in buttons {
@@ -111,11 +125,21 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
         break;
         }
     }
+    
+    func setFirstButton() {
+        if button1.isSelected != true {
+            button1.isSelected = true
+            button1.ButtonEnableAnimation(titleName: "Все меню", firstImage: "allMenu-white", secondImage: "allMenu-black")
+            animationEnablePositionButton(button: button2, x: 65)
+            animationEnablePositionButton(button: button3, x: 65)
+            animationEnablePositionButton(button: button4, x: 65)
+        }
+    }
 }
 
 extension RestaurantMenuViewController {
     func animationEnablePositionButton(button: CustomRestaurantMenuButton, x: CGFloat) {
-        UIView.animate(withDuration: 0.35,
+        UIView.animate(withDuration: 0.32,
                        delay: 0,
                        options: .curveEaseInOut,
                        animations: {
@@ -124,7 +148,7 @@ extension RestaurantMenuViewController {
     }
     
     func animationDisablePositionButton(button: CustomRestaurantMenuButton, positionButton: CGFloat) {
-        UIView.animate(withDuration: 0.35,
+        UIView.animate(withDuration: 0.32,
                        delay: 0,
                        options: .curveEaseInOut,
                        animations: {
@@ -132,4 +156,14 @@ extension RestaurantMenuViewController {
         })
     }
     
+}
+
+extension RestaurantMenuViewController: RestaurantMenuTableViewCellProtocol {
+    func didTapPlusButton(cell: RestaurantMenuTableViewCell) {
+        cell.buttonEnableAnimation()
+    }
+    
+    func didTapMinusButton(cell: RestaurantMenuTableViewCell) {
+        cell.buttonDisableAnimation()
+    }
 }

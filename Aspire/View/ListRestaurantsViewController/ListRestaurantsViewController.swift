@@ -45,18 +45,19 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        scrollView.delegate = self
+        //scrollView.delegate = self
         buttons = [button1, button2, button3]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x]
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         pageControll.numberOfPages = imageArray.count
         pageControll.currentPage = 0
-        self.scrollView.bounces = false
+        //self.scrollView.bounces = false
         self.tableView.bounces = true
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        //buttonClick(button1)
+    override func viewWillAppear(_ animated: Bool) {
+        setFirstButton()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,9 +79,9 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         NSLog("Table view scroll detected at offset: %f", scrollView.contentOffset.y)
         
-       // let y = -scrollView.contentOffset.y
-       // let height = max(y, 70)
-       // headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: height)
+        // let y = -scrollView.contentOffset.y
+        // let height = max(y, 70)
+        // headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: height)
     }
     
     //MARK: Rating Button
@@ -144,6 +145,12 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         default: ()
         break;
         }
+    }
+    
+    func setFirstButton() {
+        button1.ButtonEnableAnimation(titleName: "Популярное", firstImage: "fingerLike", secondImage: "like-black")
+        animationEnablePositionButton(button: button2, x: 81)
+        animationEnablePositionButton(button: button3, x: 81)
     }
 }
 
