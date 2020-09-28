@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dish View Controller-->
+        <scene sceneID="cIj-b6-RqP">
+            <objects>
+                <viewController storyboardIdentifier="DishViewController" id="x2Y-y2-icH" customClass="DishViewController" customModule="Aspire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8M-cS-bS0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Маргаритэ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNZ-2L-uy2">
+                                <rect key="frame" x="137" y="273.5" width="140" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DTO-xW-RWP">
+                                <rect key="frame" x="20" y="44" width="374" height="221.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hZa-Pt-fbe">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HEE-nb-Wnl">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Esk-tc-URo">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ku6-dr-u6k">
+                                <rect key="frame" x="20" y="349" width="139" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fx0-5p-UiO">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pSQ-xN-7ea">
+                                        <rect key="frame" x="0.0" y="22" width="139" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="350 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAh-Yi-OoS">
+                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(200 гр)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esN-3T-1h8">
+                                                <rect key="frame" x="80.5" y="0.0" width="58.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="200" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-PO-olC">
+                                <rect key="frame" x="20" y="403" width="374" height="125"/>
+                                <string key="text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fbI-gk-Mhm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ku6-dr-u6k" firstAttribute="top" secondItem="ZNZ-2L-uy2" secondAttribute="bottom" constant="42" id="7Qz-x3-3Iz"/>
+                            <constraint firstItem="DTO-xW-RWP" firstAttribute="top" secondItem="fbI-gk-Mhm" secondAttribute="top" id="7SG-E6-EDi"/>
+                            <constraint firstItem="DTO-xW-RWP" firstAttribute="leading" secondItem="n8M-cS-bS0" secondAttribute="leadingMargin" id="7ek-9q-q8n"/>
+                            <constraint firstItem="i1K-PO-olC" firstAttribute="leading" secondItem="Ku6-dr-u6k" secondAttribute="leading" id="FPf-TK-sNA"/>
+                            <constraint firstItem="i1K-PO-olC" firstAttribute="top" secondItem="Ku6-dr-u6k" secondAttribute="bottom" constant="8" id="IEs-5A-Tan"/>
+                            <constraint firstItem="i1K-PO-olC" firstAttribute="trailing" secondItem="DTO-xW-RWP" secondAttribute="trailing" id="Jbq-Lu-CzI"/>
+                            <constraint firstItem="DTO-xW-RWP" firstAttribute="trailing" secondItem="n8M-cS-bS0" secondAttribute="trailingMargin" id="NLC-P0-GEW"/>
+                            <constraint firstItem="fbI-gk-Mhm" firstAttribute="bottom" secondItem="i1K-PO-olC" secondAttribute="bottom" constant="334" id="buE-IM-KGb"/>
+                            <constraint firstItem="Ku6-dr-u6k" firstAttribute="leading" secondItem="fbI-gk-Mhm" secondAttribute="leading" constant="20" id="fnJ-6I-A2G"/>
+                            <constraint firstItem="DTO-xW-RWP" firstAttribute="centerX" secondItem="ZNZ-2L-uy2" secondAttribute="centerX" id="igC-au-YzI"/>
+                            <constraint firstItem="fbI-gk-Mhm" firstAttribute="trailing" secondItem="Ku6-dr-u6k" secondAttribute="trailing" constant="255" id="inH-A6-S6a"/>
+                            <constraint firstItem="ZNZ-2L-uy2" firstAttribute="top" secondItem="DTO-xW-RWP" secondAttribute="bottom" constant="8" id="jN6-ZY-Ms9"/>
+                            <constraint firstItem="fbI-gk-Mhm" firstAttribute="bottom" secondItem="Ku6-dr-u6k" secondAttribute="bottom" constant="467" id="x8v-Uc-ecz"/>
+                            <constraint firstItem="fbI-gk-Mhm" firstAttribute="bottom" secondItem="ZNZ-2L-uy2" secondAttribute="bottom" constant="555" id="zES-e0-PEE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L04-q6-kNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.63768115942031" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

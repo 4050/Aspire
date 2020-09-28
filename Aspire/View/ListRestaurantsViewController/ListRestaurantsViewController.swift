@@ -13,75 +13,50 @@ struct ButtonPosition {
     var buttonXPosition: [CGFloat?]?
 }
 
-class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button1: CustomListRestaurantsButton!
     @IBOutlet weak var button2: CustomListRestaurantsButton!
     @IBOutlet weak var button3: CustomListRestaurantsButton!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var headerConstraint: NSLayoutConstraint!
     
-    private let restaurantName = ["Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max"]
-    private let restaurantImage = "rest1.png"
-    private var goingUp: Bool?
-    private var childScrollingDownDueToParent = false
+    
+
     private var buttons: [CustomListRestaurantsButton] = []
     private var positionButton = ButtonPosition()
     private var checkRatingButton: Bool = false
-    private var lastContentOffset: CGFloat = 0
     
+    public var colors = [UIColor.black, UIColor.green, UIColor.red]
+    public let restaurantName = ["Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max"]
+    public let restaurantImage = "rest1.png"
     public let countCell = 1
     public let reuseIdentifier = "CollectionViewCell"
-    public var imageArrayAd = ["ad1","ad2"]
-    public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad1")]
+    public var imageArrayAd = ["ad1","ad2", "ad1"]
+    public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "rest1"), #imageLiteral(resourceName: "ad1")]
     public var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        //scrollView.delegate = self
         buttons = [button1, button2, button3]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x]
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         pageControll.numberOfPages = imageArray.count
         pageControll.currentPage = 0
-        //self.scrollView.bounces = false
-        self.tableView.bounces = true
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setFirstButton()
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RestaurantTableViewCell
-        cell.ImageViewCell.image = UIImage(named: restaurantImage)
-        cell.nameLabel.text = restaurantName[indexPath.row]
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantName.count // your number of cells here
+        //setFirstButton()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         NSLog("Table view scroll detected at offset: %f", scrollView.contentOffset.y)
-        
-        // let y = -scrollView.contentOffset.y
-        // let height = max(y, 70)
-        // headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: height)
     }
     
     //MARK: Rating Button

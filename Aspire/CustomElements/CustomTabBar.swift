@@ -21,17 +21,9 @@ class CustomTabBar: UITabBar {
         setupTabBar()
     }
     
-  // override func prepareForInterfaceBuilder() {
-  //     setupTabBar()
-  // }
-    
     func setupTabBar() {
-        shadowLayer()
         layer.cornerRadius = 30
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         layer.masksToBounds = true
-    }
-    
-    func shadowLayer() {
     }
 }

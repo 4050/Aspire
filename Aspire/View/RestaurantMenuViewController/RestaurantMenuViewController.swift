@@ -9,65 +9,44 @@
 import UIKit
 
 
-class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    
+class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button1: CustomRestaurantMenuButton!
     @IBOutlet weak var button2: CustomRestaurantMenuButton!
     @IBOutlet weak var button3: CustomRestaurantMenuButton!
     @IBOutlet weak var button4: CustomRestaurantMenuButton!
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControll: UIPageControl!
-    
-    
-    
-    private var product = ["Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1"]
-    private var image = ["food2.png", "food3.png", "food2.png", "food3.png", "food2.png"]
-    private var buttons: [CustomRestaurantMenuButton] = []
-    private var productCellId = "RestaurantMenuTableViewCell"
-    
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    public var product = ["Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1"]
+    public var image = ["food2.png", "food3.png", "food2.png", "food3.png", "food2.png"]
+    public var productCellId = "TestRestaurantMenuTableViewCell"
+    public let segueIdentifier = "DishView"
     public var rest = RestaurantMenuTableViewCell()
     public var reuseIdentifier = "CollectionViewCell"
-    public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad1")]
+    public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad2")]
+    public var colors: [UIColor] = [UIColor.black, UIColor.gray, UIColor.red]
     
+    private var buttons: [CustomRestaurantMenuButton] = []
     private var positionButton = ButtonPosition()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib.init(nibName: productCellId, bundle: nil), forCellReuseIdentifier:  productCellId)
+        //tableView.register(UINib.init(nibName: productCellId, bundle: nil), forCellReuseIdentifier:  productCellId)
         tableView.separatorColor = UIColor.clear
         buttons = [button1, button2, button3, button4]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x, button4.frame.origin.x]
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        pageControll.numberOfPages = imageArray.count
-        pageControll.currentPage = 0
+        //pageControll.numberOfPages = imageArray.count
+        //pageControll.currentPage = 0
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-           super.viewDidAppear(true)
-           setFirstButton()
-       }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        super.viewDidAppear(true)
+        //setFirstButton()
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return product.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: productCellId, for: indexPath) as! RestaurantMenuTableViewCell
-        cell.foodNameLabel.text = product[indexPath.row]
-        cell.imageViewCell?.image = UIImage(named: image[indexPath.row])
-        cell.delegate = self
-        cell.minusButton.tag = indexPath.row
-        cell.plusButton.tag = indexPath.row
-        cell.firstButtonDisable()
-        return cell
-    }
-    
     
     func restartButtonPosition() {
         for button in buttons {
@@ -97,7 +76,7 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
                     button.ButtonDisableAnimation(titleName: "Напитки", firstImage: "drinks-white", secondImage: "drinks-black")
                     break;
                 default: ()
-                break;
+                    break;
                 }
             }
         }
@@ -122,7 +101,7 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
             selectButton.ButtonEnableAnimation(titleName: "Напитки", firstImage: "drinks-white", secondImage: "drinks-black")
             break;
         default: ()
-        break;
+            break;
         }
     }
     
@@ -144,7 +123,7 @@ extension RestaurantMenuViewController {
                        options: .curveEaseInOut,
                        animations: {
                         button.transform = CGAffineTransform(translationX: button.transform.tx + x, y: button.transform.ty)
-        })
+                       })
     }
     
     func animationDisablePositionButton(button: CustomRestaurantMenuButton, positionButton: CGFloat) {
@@ -153,7 +132,7 @@ extension RestaurantMenuViewController {
                        options: .curveEaseInOut,
                        animations: {
                         button.transform = CGAffineTransform(translationX: positionButton, y: button.transform.ty)
-        })
+                       })
     }
     
 }

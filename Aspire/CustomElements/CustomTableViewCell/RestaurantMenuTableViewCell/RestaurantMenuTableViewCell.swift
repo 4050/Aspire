@@ -88,9 +88,9 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     }
     
     func buttonDisableAnimation() {
-        
         counter -= 1
         labelCount.text = String(counter)
+        
         if counter == 0 {
             StepperDisableAnimation()
         }
@@ -103,6 +103,7 @@ class RestaurantMenuTableViewCell: UITableViewCell {
 }
 
 extension RestaurantMenuTableViewCell {
+    
     public func StepperEnableAnimation() {
         UIView.animate(withDuration: 0.3,
                        delay: 0,
@@ -110,14 +111,14 @@ extension RestaurantMenuTableViewCell {
                        animations: {
                         self.labelCount.isHidden = false
                         
-        })
+                       })
         UIView.animate(withDuration: 0.35,
                        delay: 0,
                        options: .curveEaseInOut,
                        animations: {
                         self.minusButton.isHidden = false
                         
-        })
+                       })
         
     }
     
@@ -127,12 +128,12 @@ extension RestaurantMenuTableViewCell {
                        options: .curveEaseInOut,
                        animations: {
                         self.minusButton.isHidden = true
-        })
+                       })
         UIView.animate(withDuration: 0.35,
                        delay: 0,
                        options: .curveEaseInOut,
                        animations: {
                         self.labelCount.isHidden = true
-        })
+                       })
     }
 }

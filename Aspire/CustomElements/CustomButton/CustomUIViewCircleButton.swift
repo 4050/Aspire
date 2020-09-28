@@ -21,10 +21,6 @@ class CustomUIViewCircleButton: UIView {
         setupUIView()
     }
     
-   // override func prepareForInterfaceBuilder() {
-   //      setupUIView()
-   //  }
-    
     func setupUIView() {
         setShadow()
         layer.cornerRadius   = 25

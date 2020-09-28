@@ -21,10 +21,6 @@ class CustomPageControl: UIPageControl {
         setupPageControl()
     }
     
-//    override func prepareForInterfaceBuilder() {
-//         setupPageControl()
-//     }
-    
     override func layoutSubviews() {
            super.layoutSubviews()
            setupPageControl()

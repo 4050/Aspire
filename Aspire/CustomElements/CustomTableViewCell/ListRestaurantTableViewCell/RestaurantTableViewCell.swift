@@ -19,7 +19,6 @@ class RestaurantTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setupCustomViewCell()
         setupImageViewCell()
-        //setupCell()
     }
     
 

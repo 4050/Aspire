@@ -21,10 +21,6 @@ class CustomSocialNetworkButton: UIButton {
         setupButton()
     }
     
-  //  override func prepareForInterfaceBuilder() {
-  //      setupButton()
-  //  }
-    
     func setupButton() {
         setShadow()
         layer.cornerRadius   = 8

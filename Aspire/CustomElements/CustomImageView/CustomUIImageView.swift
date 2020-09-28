@@ -24,10 +24,6 @@ class CustomUIImageView: UIImageView {
         setupImageView()
     }
     
-  //  override func prepareForInterfaceBuilder() {
-  //      setupImageView()
-  //  }
-    
     func setupImageView() {
         setShadow()
         layer.cornerRadius   = 25

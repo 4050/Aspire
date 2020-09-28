@@ -18,14 +18,9 @@ class CustomCollectionView: UICollectionView {
     override func awakeFromNib() {
         setupCollectionView()
     }
-    
-   // override func prepareForInterfaceBuilder() {
-   //     setupCollectionView()
-   // }
-    
+
     func setupCollectionView() {
         backgroundColor = UIColor.clear
-        //backgroundView = UIView.init(frame: CGRect.zero)
         layer.cornerRadius = 12
         layer.shadowColor   = UIColor.black.cgColor
         layer.shadowOffset  = CGSize(width: 1, height: 1)

@@ -21,10 +21,6 @@ class CustomListRestaurantsButton: UIButton {
         setupButton()
     }
     
-  //  override func prepareForInterfaceBuilder() {
-  //      setupButton()
-  //  }
-    
     func setupButton() {
         setShadow()
         self.titleLabel?.alpha = 0
@@ -42,6 +38,9 @@ class CustomListRestaurantsButton: UIButton {
         layer.masksToBounds = true
         clipsToBounds       = false
     }
+}
+
+extension CustomListRestaurantsButton {
     
     public func ButtonEnableAnimation(titleName: String, firstImage: String, secondImage: String) {
         UIView.animate(withDuration: 0.4,
@@ -61,6 +60,7 @@ class CustomListRestaurantsButton: UIButton {
                         self.setNeedsDisplay()
         }
         )}
+    
     public func ButtonDisableAnimation(titleName: String, firstImage: String, secondImage: String) {
         UIView.animate(withDuration: 0.4,
                        delay: 0,

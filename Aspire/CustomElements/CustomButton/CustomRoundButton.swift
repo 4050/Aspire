@@ -26,10 +26,6 @@ class CustomRoundButton: UIButton {
         setupButton()
     }
     
-//    override func prepareForInterfaceBuilder() {
-//         setupButton()
-//     }
-//
     func setupButton() {
         setShadow()
         layer.cornerRadius   = 30

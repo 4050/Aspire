@@ -29,8 +29,6 @@ class CustomStepperView: UIView {
     
     func setupStepperView() {
         setShadow()
-        //Bundle.main.loadNibNamed("CustomStepperView", owner: self, options: nil)
-        //addSubview(stackView)
         layer.cornerRadius   = 7
     }
     
