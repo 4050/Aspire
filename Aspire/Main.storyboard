@@ -71,23 +71,6 @@
             <point key="canvasLocation" x="128.98550724637681" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="VfZ-0w-RVd">
-            <objects>
-                <viewController storyboardIdentifier="UIViewController-VBL-gK-jAR" id="VBL-gK-jAR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OCU-1S-1BZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="zIF-l1-3KH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" image="Аккаунт" id="63h-qy-HhK"/>
-                    <navigationItem key="navigationItem" id="M9e-8w-uBN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dQB-Xg-oap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1709" y="1097"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="qIK-Ka-xlB">
             <objects>
                 <viewController storyboardIdentifier="UIViewController-4jd-aq-Txe" id="4jd-aq-Txe" sceneMemberID="viewController">
@@ -149,7 +132,6 @@
     <resources>
         <image name="Logo-aspire" width="112" height="49"/>
         <image name="search" width="24" height="24"/>
-        <image name="Аккаунт" width="22" height="27"/>
         <image name="Избраные" width="26" height="25"/>
         <image name="Корзина" width="35" height="22"/>
         <systemColor name="darkTextColor">
