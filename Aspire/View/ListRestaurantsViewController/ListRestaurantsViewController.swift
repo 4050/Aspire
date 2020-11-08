@@ -24,8 +24,6 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var headerView: UIView!
     
-    
-
     private var buttons: [CustomListRestaurantsButton] = []
     private var positionButton = ButtonPosition()
     private var checkRatingButton: Bool = false
@@ -35,6 +33,7 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     public let restaurantImage = "rest1.png"
     public let countCell = 1
     public let reuseIdentifier = "CollectionViewCell"
+    public var reuseIdentifierTableViewCell = "RestaurantTableViewCell"
     public var imageArrayAd = ["ad1","ad2", "ad1"]
     public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "rest1"), #imageLiteral(resourceName: "ad1")]
     public var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
@@ -46,6 +45,7 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         buttons = [button1, button2, button3]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x]
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        tableView.register(UINib(nibName: "RestaurantTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierTableViewCell)
         pageControll.numberOfPages = imageArray.count
         pageControll.currentPage = 0
         

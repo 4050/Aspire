@@ -25,15 +25,16 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
     public let segueIdentifier = "DishView"
     public var rest = RestaurantMenuTableViewCell()
     public var reuseIdentifier = "CollectionViewCell"
+    public var reuseIdentifierTableViewCell = "RestaurantTableViewCell"
     public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad2")]
     public var colors: [UIColor] = [UIColor.black, UIColor.gray, UIColor.red]
     
     private var buttons: [CustomRestaurantMenuButton] = []
     private var positionButton = ButtonPosition()
+    private var restaurantMenuTableViewCell = RestaurantMenuTableViewCell()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.register(UINib.init(nibName: productCellId, bundle: nil), forCellReuseIdentifier:  productCellId)
         tableView.separatorColor = UIColor.clear
         buttons = [button1, button2, button3, button4]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x, button4.frame.origin.x]

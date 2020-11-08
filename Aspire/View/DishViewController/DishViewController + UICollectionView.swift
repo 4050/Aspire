@@ -34,23 +34,6 @@ extension DishViewController {
         targetContentOffset.pointee = offset
     }
     
-   // func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt //indextPath: IndexPath) -> CGSize {
-   //     return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
-   // }
-   //
-   // func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt //section: Int) -> UIEdgeInsets {
-   //     return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-   //
-   // }
-   //
-   // func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, //minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-   //     return 0
-   // }
-   //
-   // func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, //minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-   //     return 0
-   // }
-    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         //pageControll.currentPage = Int(scrollView.contentOffset.x + 50) / Int(scrollView.frame.width)
     }
