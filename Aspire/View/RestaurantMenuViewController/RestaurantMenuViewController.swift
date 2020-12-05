@@ -18,7 +18,7 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var button4: CustomRestaurantMenuButton!
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
     public var product = ["Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1", "Блюдо1"]
     public var image = ["food2.png", "food3.png", "food2.png", "food3.png", "food2.png"]
     public var productCellId = "TestRestaurantMenuTableViewCell"
@@ -27,21 +27,34 @@ class RestaurantMenuViewController: UIViewController, UITableViewDelegate, UITab
     public var reuseIdentifier = "CollectionViewCell"
     public var reuseIdentifierTableViewCell = "RestaurantTableViewCell"
     public var imageArray: [UIImage] = [#imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad2"), #imageLiteral(resourceName: "ad2")]
-    public var colors: [UIColor] = [UIColor.black, UIColor.gray, UIColor.red]
+    
+    var number: Int = 0
+    var sum: Int = 0
     
     private var buttons: [CustomRestaurantMenuButton] = []
     private var positionButton = ButtonPosition()
     private var restaurantMenuTableViewCell = RestaurantMenuTableViewCell()
     
+    let button = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorColor = UIColor.clear
         buttons = [button1, button2, button3, button4]
         positionButton.buttonXPosition = [button1.frame.origin.x, button2.frame.origin.x, button3.frame.origin.x, button4.frame.origin.x]
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        //pageControll.numberOfPages = imageArray.count
-        //pageControll.currentPage = 0
         
+        pageControll.numberOfPages = imageArray.count
+        pageControll.currentPage = 0
+        
+        button.bounds = CGRect(x: 0, y: 0, width: 420, height: 77)
+        button.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height + 40)
+        button.layer.cornerRadius = 30
+        button.backgroundColor = #colorLiteral(red: 0.9874770045, green: 0.2656408846, blue: 0.2610104084, alpha: 1)
+        //button.setTitle("Корзина: \(number) на сумму \(sum) грн", for: .normal)
+        self.view.addSubview(button)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -136,14 +149,46 @@ extension RestaurantMenuViewController {
                        })
     }
     
+    func buttonAppearance(button: UIButton) {
+        UIView.animate(withDuration: 0.32,
+                       delay: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        button.transform = CGAffineTransform(translationX: button.transform.tx, y: button.transform.ty - 77)
+                       })
+    }
+    
+    func buttonHidden(button: UIButton) {
+        UIView.animate(withDuration: 0.32,
+                       delay: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        button.transform = CGAffineTransform(translationX: button.transform.tx, y: button.transform.ty + 77)
+                       })
+    }
+    
 }
 
 extension RestaurantMenuViewController: RestaurantMenuTableViewCellProtocol {
     func didTapPlusButton(cell: RestaurantMenuTableViewCell) {
         cell.buttonEnableAnimation()
+        if number == 0 {
+            buttonAppearance(button: button)
+        }
+        sum += 3000
+        number += 1
+        button.setTitle("Корзина: \(number) на сумму \(sum) грн", for: .normal)
+        
     }
     
     func didTapMinusButton(cell: RestaurantMenuTableViewCell) {
         cell.buttonDisableAnimation()
+        if number > 0 && number == 1 {
+            buttonHidden(button: button)
+        }
+        sum -= 3000
+        number -= 1
+        button.setTitle("Корзина: \(number) на сумму \(sum) грн", for: .normal)
     }
 }
+

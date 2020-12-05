@@ -30,11 +30,23 @@
 		8536CB9C25178A8D0027A104 /* RestaurantMenuViewController + UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536CB9B25178A8D0027A104 /* RestaurantMenuViewController + UITableView.swift */; };
 		85381F6D252A255E00764396 /* DishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85381F6B252A255E00764396 /* DishCollectionViewCell.swift */; };
 		85381F6E252A255E00764396 /* DishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85381F6C252A255E00764396 /* DishCollectionViewCell.xib */; };
+		8538B3A82570317F0092EDFF /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B3A72570317F0092EDFF /* CustomSegmentedControl.swift */; };
+		853C73E7257BAB50003A5135 /* Cell4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C73E6257BAB50003A5135 /* Cell4TableViewCell.swift */; };
 		853CED4C24DDD72500201A56 /* CustomUIViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CED4B24DDD72500201A56 /* CustomUIViewTextField.swift */; };
 		853F0BE324E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F0BE224E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift */; };
+		854202032567DA9C0088E922 /* FavoritesListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854202022567DA9C0088E922 /* FavoritesListView.storyboard */; };
+		8542020F2568091D0088E922 /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542020E2568091D0088E922 /* FavoritesListViewController.swift */; };
+		85420212256822B20088E922 /* FavoritesListViewController + UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85420211256822B20088E922 /* FavoritesListViewController + UITableView.swift */; };
 		8545BBA124FEB9EF0003CDFE /* RestaurantMenuViewController + UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545BBA024FEB9EF0003CDFE /* RestaurantMenuViewController + UICollectionView.swift */; };
+		8559A133257576DD00EC069B /* ListOrdersView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8559A132257576DD00EC069B /* ListOrdersView.storyboard */; };
+		8559A1382575792700EC069B /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8559A1362575792700EC069B /* OrdersTableViewCell.swift */; };
+		8559A1392575792700EC069B /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8559A1372575792700EC069B /* OrdersTableViewCell.xib */; };
+		8559A13C25757B9D00EC069B /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8559A13B25757B9D00EC069B /* ListOrdersViewController.swift */; };
 		855C645624F247CC0062A2B4 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */; };
-		8586028524BD9EAE001A886E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586028424BD9EAE001A886E /* NavigationController.swift */; };
+		8565E78E257AACD7005285B2 /* OrderView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8565E78D257AACD7005285B2 /* OrderView.storyboard */; };
+		8565E791257AC92A005285B2 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565E790257AC92A005285B2 /* OrderViewController.swift */; };
+		856FFD1D257BF7E8006FBDFD /* Cell1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856FFD1C257BF7E8006FBDFD /* Cell1TableViewCell.swift */; };
+		8586028524BD9EAE001A886E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586028424BD9EAE001A886E /* NavigationBar.swift */; };
 		858915E924EC206100CED350 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858915E824EC206100CED350 /* CustomPageControl.swift */; };
 		858B6B6724AE2F7C00407B11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B6B6624AE2F7C00407B11 /* LoginViewController.swift */; };
 		858B9C3B24D9AD1F005C08C4 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B9C3A24D9AD1F005C08C4 /* CustomTabBar.swift */; };
@@ -83,11 +95,23 @@
 		8536CB9B25178A8D0027A104 /* RestaurantMenuViewController + UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMenuViewController + UITableView.swift"; sourceTree = "<group>"; };
 		85381F6B252A255E00764396 /* DishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCollectionViewCell.swift; sourceTree = "<group>"; };
 		85381F6C252A255E00764396 /* DishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishCollectionViewCell.xib; sourceTree = "<group>"; };
+		8538B3A72570317F0092EDFF /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		853C73E6257BAB50003A5135 /* Cell4TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell4TableViewCell.swift; sourceTree = "<group>"; };
 		853CED4B24DDD72500201A56 /* CustomUIViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewTextField.swift; sourceTree = "<group>"; };
 		853F0BE224E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSocialNetworkButton.swift; sourceTree = "<group>"; };
+		854202022567DA9C0088E922 /* FavoritesListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesListView.storyboard; sourceTree = "<group>"; };
+		8542020E2568091D0088E922 /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
+		85420211256822B20088E922 /* FavoritesListViewController + UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesListViewController + UITableView.swift"; sourceTree = "<group>"; };
 		8545BBA024FEB9EF0003CDFE /* RestaurantMenuViewController + UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMenuViewController + UICollectionView.swift"; sourceTree = "<group>"; };
+		8559A132257576DD00EC069B /* ListOrdersView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOrdersView.storyboard; sourceTree = "<group>"; };
+		8559A1362575792700EC069B /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
+		8559A1372575792700EC069B /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
+		8559A13B25757B9D00EC069B /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		855C645524F247CC0062A2B4 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
-		8586028424BD9EAE001A886E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		8565E78D257AACD7005285B2 /* OrderView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderView.storyboard; sourceTree = "<group>"; };
+		8565E790257AC92A005285B2 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		856FFD1C257BF7E8006FBDFD /* Cell1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell1TableViewCell.swift; sourceTree = "<group>"; };
+		8586028424BD9EAE001A886E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		858915E824EC206100CED350 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		858B6B6624AE2F7C00407B11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		858B9C3A24D9AD1F005C08C4 /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTabBar.swift; path = Aspire/CustomElements/CustomTabBar.swift; sourceTree = SOURCE_ROOT; };
@@ -178,13 +202,13 @@
 			path = Aspire;
 			sourceTree = "<group>";
 		};
-		85293E152517E40B00E6CFB4 /*  CustomBasketView */ = {
+		85293E152517E40B00E6CFB4 /* CustomBasketView */ = {
 			isa = PBXGroup;
 			children = (
 				85293E192517E62D00E6CFB4 /* BasketView.swift */,
 				85293E162517E42700E6CFB4 /* BasketView.xib */,
 			);
-			path = " CustomBasketView";
+			path = CustomBasketView;
 			sourceTree = "<group>";
 		};
 		8532C0C124FBB4A7005D1628 /* CustomView */ = {
@@ -222,6 +246,32 @@
 			path = ListRestaurantTableViewCell;
 			sourceTree = "<group>";
 		};
+		8538B3A6257031570092EDFF /* CustomSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				8538B3A72570317F0092EDFF /* CustomSegmentedControl.swift */,
+			);
+			path = CustomSegmentedControl;
+			sourceTree = "<group>";
+		};
+		8541E71A256AA69100E23A97 /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				8586028424BD9EAE001A886E /* NavigationBar.swift */,
+			);
+			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
+		854202012567DA640088E922 /* FavoritesListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				854202022567DA9C0088E922 /* FavoritesListView.storyboard */,
+				8542020E2568091D0088E922 /* FavoritesListViewController.swift */,
+				85420211256822B20088E922 /* FavoritesListViewController + UITableView.swift */,
+			);
+			name = FavoritesListViewController;
+			sourceTree = "<group>";
+		};
 		8556104D24F007B9007A33E1 /* CustomSlider */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +279,35 @@
 				85660E372529C30400CB386C /* RestaurantMenuCollectionView */,
 			);
 			path = CustomSlider;
+			sourceTree = "<group>";
+		};
+		8559A1312575760C00EC069B /* ListOrdersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8559A132257576DD00EC069B /* ListOrdersView.storyboard */,
+				8559A13B25757B9D00EC069B /* ListOrdersViewController.swift */,
+			);
+			path = ListOrdersViewController;
+			sourceTree = "<group>";
+		};
+		8559A1352575781100EC069B /* OrdersTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8559A1362575792700EC069B /* OrdersTableViewCell.swift */,
+				8559A1372575792700EC069B /* OrdersTableViewCell.xib */,
+			);
+			path = OrdersTableViewCell;
+			sourceTree = "<group>";
+		};
+		8565E78C257AACC5005285B2 /* OrderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8565E78D257AACD7005285B2 /* OrderView.storyboard */,
+				856FFD1C257BF7E8006FBDFD /* Cell1TableViewCell.swift */,
+				853C73E6257BAB50003A5135 /* Cell4TableViewCell.swift */,
+				8565E790257AC92A005285B2 /* OrderViewController.swift */,
+			);
+			path = OrderViewController;
 			sourceTree = "<group>";
 		};
 		85660E372529C30400CB386C /* RestaurantMenuCollectionView */ = {
@@ -261,6 +340,9 @@
 		858B6B6224AE1E2C00407B11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8565E78C257AACC5005285B2 /* OrderViewController */,
+				8559A1312575760C00EC069B /* ListOrdersViewController */,
+				854202012567DA640088E922 /* FavoritesListViewController */,
 				85339682252CF094002C88B2 /* ProfileViewController */,
 				859A24032517550700F9ABB0 /* DishViewController */,
 				85E6631D24F57E24003C23B0 /* RestaurantMenuViewController */,
@@ -295,7 +377,9 @@
 		858B6B6524AE1E6B00407B11 /* CustomElements */ = {
 			isa = PBXGroup;
 			children = (
-				85293E152517E40B00E6CFB4 /*  CustomBasketView */,
+				8538B3A6257031570092EDFF /* CustomSegmentedControl */,
+				8541E71A256AA69100E23A97 /* CustomNavigationBar */,
+				85293E152517E40B00E6CFB4 /* CustomBasketView */,
 				851FEFFD2503A9CB00BFB92C /* CustomStepper */,
 				8532C0C124FBB4A7005D1628 /* CustomView */,
 				8556104D24F007B9007A33E1 /* CustomSlider */,
@@ -346,7 +430,6 @@
 		85E6631A24F57DB0003C23B0 /* ListRestaurantsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8586028424BD9EAE001A886E /* NavigationController.swift */,
 				85AA64B824B2167A003E0B94 /* ListRestaurantsViewController.swift */,
 				85C0E455250E3B4B003EC770 /* ListRestaurantsViewController + UITableView.swift */,
 				85D8C55024EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift */,
@@ -369,6 +452,7 @@
 		85F8DE2124B1B72300F65E95 /* CustomTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				8559A1352575781100EC069B /* OrdersTableViewCell */,
 				8535D1E124F6E30E00E70B4B /* ListRestaurantTableViewCell */,
 				8535D1E024F6DF3D00E70B4B /* RestaurantMenuTableViewCell */,
 			);
@@ -453,8 +537,12 @@
 				85E6631F24F57E6E003C23B0 /* RestaurantMenu.storyboard in Resources */,
 				8528635424F03306005E8DEF /* Main.storyboard in Resources */,
 				85E6631C24F57DF1003C23B0 /* ListRestaurantsView.storyboard in Resources */,
+				8559A1392575792700EC069B /* OrdersTableViewCell.xib in Resources */,
 				8510E99D24F11077005BC84D /* CustomCollectionViewCell.xib in Resources */,
+				854202032567DA9C0088E922 /* FavoritesListView.storyboard in Resources */,
+				8565E78E257AACD7005285B2 /* OrderView.storyboard in Resources */,
 				85E6631924F57D9F003C23B0 /* LoginView.storyboard in Resources */,
+				8559A133257576DD00EC069B /* ListOrdersView.storyboard in Resources */,
 				85E7498725175C7C00086852 /* DishView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,23 +579,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8586028524BD9EAE001A886E /* NavigationController.swift in Sources */,
+				8586028524BD9EAE001A886E /* NavigationBar.swift in Sources */,
 				85A0C14324B9B46A0043E06C /* CustomUIViewCircleButton.swift in Sources */,
 				851FEFFF2503A9FF00BFB92C /* CustomStepperView.swift in Sources */,
+				8542020F2568091D0088E922 /* FavoritesListViewController.swift in Sources */,
+				85420212256822B20088E922 /* FavoritesListViewController + UITableView.swift in Sources */,
 				858B9C3E24D9ED8C005C08C4 /* CustomListRestaurantsButton.swift in Sources */,
 				8536CB9C25178A8D0027A104 /* RestaurantMenuViewController + UITableView.swift in Sources */,
 				858B9C3B24D9AD1F005C08C4 /* CustomTabBar.swift in Sources */,
 				85339684252CF0B9002C88B2 /* ProfileViewController.swift in Sources */,
 				85293E1A2517E62D00E6CFB4 /* BasketView.swift in Sources */,
+				8559A1382575792700EC069B /* OrdersTableViewCell.swift in Sources */,
 				85C0E456250E3B4B003EC770 /* ListRestaurantsViewController + UITableView.swift in Sources */,
 				858B6B6724AE2F7C00407B11 /* LoginViewController.swift in Sources */,
 				8510E99C24F11077005BC84D /* CustomCollectionViewCell.swift in Sources */,
 				85D945FE24FD56C50041BF13 /* CustomRestaurantMenuButton.swift in Sources */,
+				8538B3A82570317F0092EDFF /* CustomSegmentedControl.swift in Sources */,
 				853F0BE324E5B47D00F2D2B1 /* CustomSocialNetworkButton.swift in Sources */,
+				853C73E7257BAB50003A5135 /* Cell4TableViewCell.swift in Sources */,
 				8535D1DE24F6DF3900E70B4B /* RestaurantMenuTableViewCell.swift in Sources */,
 				850FE25524B368F400F4F076 /* CustomUIImageView.swift in Sources */,
+				8559A13C25757B9D00EC069B /* ListOrdersViewController.swift in Sources */,
 				8521922A24AD111F0015F0F1 /* CustomRoundButton.swift in Sources */,
 				85381F6D252A255E00764396 /* DishCollectionViewCell.swift in Sources */,
+				856FFD1D257BF7E8006FBDFD /* Cell1TableViewCell.swift in Sources */,
 				8532C0C324FBB4BF005D1628 /* CustomUIView.swift in Sources */,
 				8521921924AD0C8A0015F0F1 /* ViewController.swift in Sources */,
 				85137083252646D4003FC923 /* DishViewController + UICollectionView.swift in Sources */,
@@ -515,6 +610,7 @@
 				8521921724AD0C8A0015F0F1 /* SceneDelegate.swift in Sources */,
 				85AA64B924B2167A003E0B94 /* ListRestaurantsViewController.swift in Sources */,
 				85F8DE2324B1B76300F65E95 /* RestaurantTableViewCell.swift in Sources */,
+				8565E791257AC92A005285B2 /* OrderViewController.swift in Sources */,
 				85C59B2B24F3BD10005C497F /* CustomCollectionView.swift in Sources */,
 				853CED4C24DDD72500201A56 /* CustomUIViewTextField.swift in Sources */,
 				85D8C55124EC2E2900F5BB93 /* ListRestaurantsViewController + UICollectionView.swift in Sources */,

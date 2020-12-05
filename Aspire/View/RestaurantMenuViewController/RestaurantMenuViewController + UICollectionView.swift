@@ -39,6 +39,6 @@ extension RestaurantMenuViewController {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        //pageControll.currentPage = Int(scrollView.contentOffset.x + 50) / Int(scrollView.frame.width)
+        pageControll.currentPage = Int(scrollView.contentOffset.x + 50) / Int(scrollView.frame.width)
     }
 }

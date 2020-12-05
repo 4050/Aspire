@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -71,22 +71,6 @@
             <point key="canvasLocation" x="128.98550724637681" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="qIK-Ka-xlB">
-            <objects>
-                <viewController storyboardIdentifier="UIViewController-4jd-aq-Txe" id="4jd-aq-Txe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="98p-32-s8I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0DN-Kg-63F"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" image="Избраные" id="78v-UQ-tBT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YTh-VA-bZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2425" y="1097"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="SQT-na-cTn">
             <objects>
                 <viewController storyboardIdentifier="UIViewController-apj-4U-rGW" id="apj-4U-rGW" sceneMemberID="viewController">
@@ -96,9 +80,8 @@
                         <viewLayoutGuide key="safeArea" id="Cwt-r3-lZ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="search" id="Zta-vS-siB">
-                        <color key="badgeColor" systemColor="darkTextColor"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="search" id="Oh4-Sk-odc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxX-cL-FsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,11 +97,12 @@
                         <viewLayoutGuide key="safeArea" id="lQe-Z3-g90"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="Корзина" id="vXF-RL-v8p"/>
+                    <tabBarItem key="tabBarItem" title="" image="Корзина" id="FOM-8A-gcH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ao-Yz-dnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3130" y="1097"/>
+            <point key="canvasLocation" x="3128.985507246377" y="1096.875"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="GUx-uf-pmS">
@@ -132,11 +116,7 @@
     <resources>
         <image name="Logo-aspire" width="112" height="49"/>
         <image name="search" width="24" height="24"/>
-        <image name="Избраные" width="26" height="25"/>
         <image name="Корзина" width="35" height="22"/>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

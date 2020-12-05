@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Bar-->
+        <scene sceneID="gNs-VU-3dX">
+            <objects>
+                <navigationController storyboardIdentifier="FavoritesListViewNavigationController" id="bip-aX-dwq" customClass="NavigationBar" customModule="Aspire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Избраные" id="AbH-g9-7Xu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WU3-jz-fm2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GDH-c8-vZN" kind="relationship" relationship="rootViewController" id="Nnm-4B-yvB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1J-NY-2qY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="125"/>
+        </scene>
+        <!--Избранные-->
+        <scene sceneID="tpS-mz-u8l">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesListView" id="GDH-c8-vZN" customClass="FavoritesListViewController" customModule="Aspire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rdq-w8-mK0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jzw-Sf-3nA">
+                                <rect key="frame" x="0.0" y="175" width="414" height="721"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="721" id="Za5-fs-str"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="GDH-c8-vZN" id="F1g-Th-hyZ"/>
+                                    <outlet property="delegate" destination="GDH-c8-vZN" id="6U8-YG-Ocd"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gwt-ub-f90" customClass="CustomSegmentedControl" customModule="Aspire" customModuleProvider="target">
+                                <rect key="frame" x="57" y="109" width="300" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="13u-3z-3Nm"/>
+                                    <constraint firstAttribute="width" constant="300" id="XFe-2k-d36"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Рестораны"/>
+                                    <segment title="Блюда"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.98747700449999998" green="0.26564088460000002" blue="0.2610104084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segWithSender:" destination="GDH-c8-vZN" eventType="valueChanged" id="MDi-mp-1Q5"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lLt-yR-2oQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jzw-Sf-3nA" firstAttribute="top" secondItem="gwt-ub-f90" secondAttribute="bottom" constant="16" id="4Qm-lx-hl4"/>
+                            <constraint firstAttribute="bottom" secondItem="jzw-Sf-3nA" secondAttribute="bottom" id="4on-W4-TkJ"/>
+                            <constraint firstItem="gwt-ub-f90" firstAttribute="leading" secondItem="lLt-yR-2oQ" secondAttribute="leading" constant="57" id="9xq-ZJ-daH"/>
+                            <constraint firstItem="gwt-ub-f90" firstAttribute="top" secondItem="lLt-yR-2oQ" secondAttribute="top" constant="21" id="CSO-f2-KLt"/>
+                            <constraint firstItem="lLt-yR-2oQ" firstAttribute="trailing" secondItem="gwt-ub-f90" secondAttribute="trailing" constant="57" id="J1w-Ws-cr3"/>
+                            <constraint firstItem="jzw-Sf-3nA" firstAttribute="trailing" secondItem="lLt-yR-2oQ" secondAttribute="trailing" id="Xnq-cb-vCr"/>
+                            <constraint firstItem="jzw-Sf-3nA" firstAttribute="leading" secondItem="lLt-yR-2oQ" secondAttribute="leading" id="wTo-fd-heS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Избранные" largeTitleDisplayMode="always" id="JO2-Dv-jau"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="gwt-ub-f90" id="6Bn-XX-jNc"/>
+                        <outlet property="tableView" destination="jzw-Sf-3nA" id="P7y-XX-PXk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMz-ZB-b0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740.57971014492762" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Избраные" width="26" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

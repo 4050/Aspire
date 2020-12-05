@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Bar-->
+        <scene sceneID="fFK-mL-lxb">
+            <objects>
+                <navigationController storyboardIdentifier="OrdersViewNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tab-l3-iN4" customClass="NavigationBar" customModule="Aspire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Корзина" id="4K1-hN-0TP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UNB-lz-rxx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iz7-hP-G8H" kind="relationship" relationship="rootViewController" id="D8X-D9-Htn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HqW-Mp-W9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="163"/>
+        </scene>
+        <!--Заказы-->
+        <scene sceneID="uOG-d2-dIE">
+            <objects>
+                <viewController id="iz7-hP-G8H" customClass="ListOrdersViewController" customModule="Aspire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wqb-wr-eqK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GiG-Yc-NJF">
+                                <rect key="frame" x="0.0" y="175" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iz7-hP-G8H" id="QPC-Gp-SnI"/>
+                                    <outlet property="delegate" destination="iz7-hP-G8H" id="WkO-f7-PyO"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K7h-KL-kNe" customClass="CustomSegmentedControl" customModule="Aspire" customModuleProvider="target">
+                                <rect key="frame" x="57" y="109" width="300" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Sef-6s-CEq"/>
+                                    <constraint firstAttribute="height" constant="50" id="d7A-rO-RNP"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Ожидаемые"/>
+                                    <segment title="Заверешенные"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.98747700449999998" green="0.26564088460000002" blue="0.2610104084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qk5-Uk-AeM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K7h-KL-kNe" firstAttribute="leading" secondItem="Qk5-Uk-AeM" secondAttribute="leading" constant="57" id="4zR-s7-fVX"/>
+                            <constraint firstItem="Qk5-Uk-AeM" firstAttribute="trailing" secondItem="K7h-KL-kNe" secondAttribute="trailing" constant="57" id="6BI-aZ-FLA"/>
+                            <constraint firstItem="GiG-Yc-NJF" firstAttribute="top" secondItem="K7h-KL-kNe" secondAttribute="bottom" constant="16" id="9fc-zu-lP5"/>
+                            <constraint firstAttribute="bottom" secondItem="GiG-Yc-NJF" secondAttribute="bottom" id="O2R-j6-EcZ"/>
+                            <constraint firstItem="GiG-Yc-NJF" firstAttribute="leading" secondItem="wqb-wr-eqK" secondAttribute="leading" id="cgg-m9-tX1"/>
+                            <constraint firstItem="GiG-Yc-NJF" firstAttribute="centerX" secondItem="K7h-KL-kNe" secondAttribute="centerX" id="qmr-G5-KSu"/>
+                            <constraint firstItem="K7h-KL-kNe" firstAttribute="top" secondItem="Qk5-Uk-AeM" secondAttribute="top" constant="21" id="tlh-VX-MgU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Заказы" id="eXX-Bh-4O6"/>
+                    <connections>
+                        <outlet property="tableView" destination="GiG-Yc-NJF" id="ptr-46-ajn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0X-2H-5NV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463.768115942029" y="163.39285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Корзина" width="35" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

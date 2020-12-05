@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,10 +19,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="641-UV-M7i">
                         <rect key="frame" x="20" y="0.0" width="374" height="218"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oem-SG-bKf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oem-SG-bKf">
                                 <rect key="frame" x="332" y="173" width="27" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" backgroundImage="emptyLike"/>
+                                <connections>
+                                    <action selector="likeButtonTap:" destination="hzV-Nd-9gY" eventType="touchUpInside" id="ZTM-PB-nc8"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mOB-23-G3K">
                                 <rect key="frame" x="0.0" y="0.0" width="374" height="154"/>
@@ -92,6 +95,7 @@
             <connections>
                 <outlet property="ImageViewCell" destination="mOB-23-G3K" id="c6R-9m-FA6"/>
                 <outlet property="backgroundViewCell" destination="641-UV-M7i" id="997-py-V3k"/>
+                <outlet property="likeButton" destination="oem-SG-bKf" id="ipq-0e-3Sh"/>
                 <outlet property="nameLabel" destination="TjY-HQ-fBf" id="T9u-6g-Qjf"/>
             </connections>
             <point key="canvasLocation" x="-70" y="-38"/>

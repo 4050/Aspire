@@ -13,7 +13,7 @@ struct ButtonPosition {
     var buttonXPosition: [CGFloat?]?
 }
 
-class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, RestaurantTableViewCellLikeButton {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button1: CustomListRestaurantsButton!
@@ -48,11 +48,12 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
         tableView.register(UINib(nibName: "RestaurantTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierTableViewCell)
         pageControll.numberOfPages = imageArray.count
         pageControll.currentPage = 0
-        
+        print("ViewDidLoad")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //setFirstButton()
+        print("viewWillAppear")
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -60,17 +61,19 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     //MARK: Rating Button
-    @IBAction func ratingButton(_ button: UIButton) {
-        if checkRatingButton == false {
-            button.setBackgroundImage(UIImage(named: "fullLike.png"), for: .normal)
-            checkRatingButton = true
-        }
-        else
-        {
-            button.setBackgroundImage(UIImage(named: "emptyLike.png"), for: .normal)
-            checkRatingButton = false
-        }
-        print("RatingButton: tap")
+    func didTapLikeButton(cell: RestaurantTableViewCell) {
+        
+        cell.ratingButton()
+        //if checkRatingButton == false {
+        //    cell.likeButton.setBackgroundImage(UIImage(named: "fullLike.png"), for: .normal)
+        //    cell.checkRatingButton = true
+        //}
+        //else
+        //{
+        //    cell.likeButton.setBackgroundImage(UIImage(named: "emptyLike.png"), for: .normal)
+        //    cell.checkRatingButton = false
+        //}
+        //print("RatingButton: tap")
     }
     
     

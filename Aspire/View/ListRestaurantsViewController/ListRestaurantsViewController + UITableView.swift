@@ -18,6 +18,8 @@ extension ListRestaurantsViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierTableViewCell, for: indexPath) as! RestaurantTableViewCell
         cell.ImageViewCell.image = UIImage(named: restaurantImage)
         cell.nameLabel.text = restaurantName[indexPath.row]
+        cell.delegate = self
+        cell.likeButton.tag = indexPath.row
         
         return cell
     }

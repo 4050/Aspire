@@ -29,12 +29,11 @@ class DishViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cellWidth = floor(screenSize.width * cellScale)
         let cellHeight = floor(screenSize.height * cellScale)
         let insetX = (view.bounds.width - cellWidth) / 2.0
-        
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
         collectionView.dataSource = self
-        //firstButtonDisable() 
+        
     }
     
     @IBAction func plusButtonTap(_ sender: UIButton) {
@@ -42,11 +41,12 @@ class DishViewController: UIViewController, UICollectionViewDataSource, UICollec
         buttonEnableAnimation()
     }
     
-    @IBAction func button(_ sender: Any) {
-        print("print")
+    @IBAction func minusButtonTap(_ sender: UIButton) {
+        buttonDisableAnimation()
     }
     
     func buttonEnableAnimation() {
+        minusButtonCount.isUserInteractionEnabled  = true
         counter += 1
         labelCount.text = String(self.counter)
         if counter > 1 {
@@ -59,11 +59,11 @@ class DishViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func buttonDisableAnimation() {
-        counter -= 1
-        labelCount.text = String(counter)
-        
-        if counter == 0 {
-            StepperDisableAnimation()
+        if counter > 0 {
+            counter -= 1
+            labelCount.text = String(counter)
+        } else {
+            minusButtonCount.isUserInteractionEnabled  = false
         }
     }
     

@@ -25,7 +25,6 @@ extension RestaurantMenuViewController {
         cell.delegate = self
         cell.minusButton.tag = indexPath.row
         cell.plusButton.tag = indexPath.row
-        //cell.firstButtonDisable()
         return cell
     }
 

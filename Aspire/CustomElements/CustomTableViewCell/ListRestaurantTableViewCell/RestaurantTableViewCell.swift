@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol RestaurantTableViewCellLikeButton {
+    func didTapLikeButton(cell: RestaurantTableViewCell)
+}
+
 class RestaurantTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ImageViewCell: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var backgroundViewCell: UIView!
+    @IBOutlet weak var likeButton: UIButton!
     
+    var delegate: RestaurantTableViewCellLikeButton?
+    var checkRatingButton: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +32,24 @@ class RestaurantTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    @IBAction func likeButtonTap(_ sender: UIButton) {
+        print("tap")
+        delegate?.didTapLikeButton(cell: self)
+    }
+
+    func ratingButton() {
+        if checkRatingButton == false {
+            likeButton.setBackgroundImage(UIImage(named: "fullLike.png"), for: .normal)
+            checkRatingButton = true
+        }
+        else
+        {
+            likeButton.setBackgroundImage(UIImage(named: "emptyLike.png"), for: .normal)
+            checkRatingButton = false
+        }
+        print("RatingButton: tap")
     }
     
     func setupCustomViewCell() {
