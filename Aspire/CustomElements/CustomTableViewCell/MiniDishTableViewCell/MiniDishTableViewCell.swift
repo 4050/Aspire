@@ -1,44 +1,42 @@
 //
-//  RestaurantMenuTableViewCell.swift
+//  MiniDishTableViewCell.swift
 //  Aspire
 //
-//  Created by Stanislav on 26.08.2020.
+//  Created by Stanislav on 07.12.2020.
 //  Copyright © 2020 Stanislav. All rights reserved.
 //
 
 import UIKit
 
-protocol RestaurantMenuTableViewCellProtocol {
-    func didTapPlusButton(cell: RestaurantMenuTableViewCell)
-    func didTapMinusButton(cell: RestaurantMenuTableViewCell)
+protocol MiniDishTableViewCellProtocol {
+    func didTapPlusButton(cell: MiniDishTableViewCell)
+    func didTapMinusButton(cell: MiniDishTableViewCell)
 }
 
-class RestaurantMenuTableViewCell: UITableViewCell {
+class MiniDishTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var imageViewCell: UIImageView!
     @IBOutlet weak var viewCell: UIView!
     @IBOutlet weak var foodNameLabel: UILabel!
-    @IBOutlet weak var dishDescriptionLabel: UILabel!
+    @IBOutlet weak var dishCostLabel: UILabel!
     @IBOutlet weak var stepperView: UIView!
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var labelCount: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     
-    public var cellIndex: NSIndexPath?
-    
-    
     public var counter: Int = 0
     
-    var delegate: RestaurantMenuTableViewCellProtocol?
-    
+    var delegate: MiniDishTableViewCellProtocol?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCustomViewCell()
     }
-    
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
+        // Configure the view for the selected state
     }
     
     func setupCustomViewCell() {
@@ -72,9 +70,8 @@ class RestaurantMenuTableViewCell: UITableViewCell {
         delegate?.didTapMinusButton(cell: self)
     }
     
-    
-    
     func buttonEnableAnimation() {
+        minusButton.isUserInteractionEnabled  = true
         counter += 1
         labelCount.text = String(self.counter)
         if counter > 1 {
@@ -87,11 +84,11 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     }
     
     func buttonDisableAnimation() {
-        counter -= 1
-        labelCount.text = String(counter)
-        
-        if counter == 0 {
-            StepperDisableAnimation()
+        if counter > 0 {
+            counter -= 1
+            labelCount.text = String(counter)
+        } else {
+            minusButton.isUserInteractionEnabled  = false
         }
     }
     
@@ -101,7 +98,7 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     }
 }
 
-extension RestaurantMenuTableViewCell {
+extension MiniDishTableViewCell {
     
     public func StepperEnableAnimation() {
         UIView.animate(withDuration: 0.3,

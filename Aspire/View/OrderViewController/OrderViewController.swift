@@ -13,11 +13,18 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     public var picker = UIPickerView()
     public var cell4 = Cell4TableViewCell()
+    public var cell1 = Cell1TableViewCell()
+    public var products: [Dish?] = []
+    
+    public var dictionaryProduct = [Dish: Int]()
+    
+    public var foodAmount: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        print("Order view Controller: \(products)")
         
     }
     
@@ -28,8 +35,10 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath )
-            //set the data here
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! Cell1TableViewCell
+            for index in 0 ..< (products.count) {
+                cell.products.append(products[index])
+            }
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
@@ -47,8 +56,9 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //set the data here
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell6", for: indexPath)
-            //set the data here
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell6", for: indexPath) as! Cell6TableViewCell
+            cell.foodAmount.text = "\(foodAmount!) грн"
+            cell.totalOrderAmount.text = "\(foodAmount!) грн"
             return cell
         }
     }

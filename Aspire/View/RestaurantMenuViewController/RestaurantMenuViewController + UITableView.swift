@@ -15,17 +15,22 @@ extension RestaurantMenuViewController {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return product.count
+        return dishId.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: productCellId, for: indexPath) as! RestaurantMenuTableViewCell
-        cell.foodNameLabel.text = product[indexPath.row]
-        cell.imageViewCell?.image = UIImage(named: image[indexPath.row])
+        cell.foodNameLabel.text = dishName[indexPath.row]
+        cell.imageViewCell?.image = UIImage(named: dishImage[indexPath.row])
         cell.delegate = self
         cell.minusButton.tag = indexPath.row
         cell.plusButton.tag = indexPath.row
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
     }
 
 }

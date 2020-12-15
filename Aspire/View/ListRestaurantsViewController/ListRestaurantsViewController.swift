@@ -28,6 +28,7 @@ class ListRestaurantsViewController: UIViewController, UITableViewDelegate, UITa
     private var positionButton = ButtonPosition()
     private var checkRatingButton: Bool = false
     
+    
     public var colors = [UIColor.black, UIColor.green, UIColor.red]
     public let restaurantName = ["Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max", "Restaurant", "Pepe`s", "Max"]
     public let restaurantImage = "rest1.png"

@@ -219,7 +219,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TestRestaurantMenuTableViewCell" rowHeight="124" id="YiC-wy-AWS" customClass="RestaurantMenuTableViewCell" customModule="Aspire" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="24" reuseIdentifier="TestRestaurantMenuTableViewCell" rowHeight="124" id="YiC-wy-AWS" customClass="RestaurantMenuTableViewCell" customModule="Aspire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="372" width="414" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="YiC-wy-AWS" id="jvr-eZ-A9L">
